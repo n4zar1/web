@@ -113,14 +113,14 @@ Verano2019!</pre>
   </a>
 
   <h3>Últimos vídeos</h3>
-  <div class="vids">
-    <a class="vid" href="https://www.youtube.com/shorts/PqqVgxhEvfA" target="_blank" rel="noopener">
-      <div class="th" style="background-image:url(assets/v07.jpg)"></div>
-      <b>Tu contraseña está a la venta</b>
+  <div class="vids" id="vids">
+    <a class="vid" href="https://www.youtube.com/shorts/WM3d7987-do" target="_blank" rel="noopener">
+      <div class="th" style="background-image:url(https://i.ytimg.com/vi/WM3d7987-do/oar2.jpg),url(https://i.ytimg.com/vi/WM3d7987-do/hqdefault.jpg)"></div>
+      <b>¿Alguien te ROBA el WIFI? Descúbrelo en 1 minuto</b>
     </a>
-    <a class="vid" href="https://www.youtube.com/shorts/a063Kmd7SGA" target="_blank" rel="noopener">
-      <div class="th" style="background-image:url(assets/v05.jpg)"></div>
-      <b>Tu foto dice dónde vives</b>
+    <a class="vid" href="https://www.youtube.com/shorts/Fmxf9dZAWzA" target="_blank" rel="noopener">
+      <div class="th" style="background-image:url(https://i.ytimg.com/vi/Fmxf9dZAWzA/oar2.jpg),url(https://i.ytimg.com/vi/Fmxf9dZAWzA/hqdefault.jpg)"></div>
+      <b>Cómo se HACKEA una empresa: las 7 fases de un ataque real</b>
     </a>
   </div>
   <a class="more" href="https://www.youtube.com/@n4zar1/shorts" target="_blank" rel="noopener">Ver todos los vídeos →</a>
@@ -134,6 +134,20 @@ Verano2019!</pre>
 document.getElementById('yr').textContent = new Date().getFullYear();
 // In local preview (no domain yet) point to the local labs folder.
 if (!/n4zar1\.com$/.test(location.hostname)) document.getElementById('labsLink').href = '../labs/index.html';
+// Latest videos: videos.json is refreshed every 30 min by a GitHub Action from the YouTube feed.
+fetch('videos.json?t=' + Date.now()).then(r => r.json()).then(vs => {
+  const box = document.getElementById('vids');
+  box.replaceChildren(...vs.slice(0, 4).map(v => {
+    const a = document.createElement('a');
+    a.className = 'vid'; a.target = '_blank'; a.rel = 'noopener';
+    a.href = 'https://www.youtube.com/shorts/' + v.id;
+    a.dataset.goatcounterClick = 'video-' + v.id;
+    const th = document.createElement('div'); th.className = 'th';
+    th.style.backgroundImage = `url(https://i.ytimg.com/vi/${v.id}/oar2.jpg),url(https://i.ytimg.com/vi/${v.id}/hqdefault.jpg)`;
+    const b = document.createElement('b'); b.textContent = v.titulo;
+    a.append(th, b); return a;
+  }));
+}).catch(() => {});
 </script>
 <script data-goatcounter="https://n4zar1.goatcounter.com/count" async src="https://gc.zgo.at/count.js"></script>
 </body>

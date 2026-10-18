@@ -1,0 +1,17 @@
+name: Últimos vídeos
+on:
+  schedule:
+    - cron: '*/30 * * * *'
+  workflow_dispatch:
+permissions:
+  contents: write
+jobs:
+  actualizar:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - run: python3 scripts/videos.py
+      - run: |
+          git diff --quiet videos.json && exit 0
+          git -c user.name=n4zar1 -c user.email=n4zar1.cyber@gmail.com commit -am "Actualiza últimos vídeos"
+          git push
