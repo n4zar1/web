@@ -33,17 +33,26 @@ body::before{content:"";position:fixed;inset:0;pointer-events:none;opacity:.5;z-
 @keyframes rejilla{to{background-position:0 56px,56px 0}}
 @keyframes pulso{50%{box-shadow:0 0 0 12px rgba(63,224,255,0)}}
 a{color:inherit}
-.wrap{max-width:640px;margin:0 auto;padding:56px 16px 40px}
+.wrap{max-width:720px;margin:0 auto;padding:48px 20px 40px}
 .tag{display:inline-flex;align-items:center;gap:10px;font:900 13px/1 var(--body);letter-spacing:.08em;color:var(--cyan)}
 .tag i{width:12px;height:12px;border-radius:50%;background:var(--cyan);box-shadow:0 0 0 6px rgba(63,224,255,.18);animation:pulso 2s ease-in-out infinite}
 
-header{display:flex;flex-direction:column;align-items:center;text-align:center;gap:18px}
-.av{width:132px;height:132px;border-radius:50%;object-fit:cover;box-shadow:0 0 0 4px var(--ink),0 0 0 6px rgba(63,224,255,.65),0 20px 70px rgba(47,125,255,.55)}
-h1{margin:0;font:800 clamp(40px,9vw,58px)/1 var(--display);letter-spacing:-.02em}
+/* cabecera como la de la tienda: franja ancha, texto a la izquierda y avatar a la derecha */
+.hero{border-bottom:1px solid var(--line);background:radial-gradient(900px 400px at 85% -10%,rgba(47,125,255,.28),transparent 60%),radial-gradient(700px 360px at 0% 110%,rgba(63,224,255,.16),transparent 60%),rgba(7,16,41,.6)}
+.hero-in{max-width:1080px;margin:0 auto;padding:64px 20px;display:grid;grid-template-columns:minmax(0,1fr) auto;gap:40px;align-items:center}
+.hero-in .txt{display:flex;flex-direction:column;align-items:flex-start;gap:16px}
+.hero .accesos{display:flex;flex-wrap:wrap;gap:10px;margin-top:8px}
+.hero .accesos a{text-decoration:none;color:var(--fg);background:var(--panel);border:1px solid var(--line);padding:9px 16px;border-radius:999px;font:700 15px/1 var(--body);transition:border-color .15s}
+.hero .accesos a:hover{border-color:var(--blue)}
+.hero .accesos a.rojo{background:var(--red);border-color:var(--red);color:#fff}
+@media (max-width:720px){.hero-in{grid-template-columns:minmax(0,1fr);padding:44px 20px;gap:24px}.hero-in .av{order:-1;width:104px;height:104px}}
+.av{width:180px;height:180px;border-radius:50%;object-fit:cover;box-shadow:0 0 0 4px var(--ink),0 0 0 6px rgba(63,224,255,.65),0 20px 70px rgba(47,125,255,.55)}
+h1{margin:0;font:800 clamp(42px,7vw,64px)/1.04 var(--display);letter-spacing:-.02em}
+h1 span{display:block;color:var(--blue);font-size:.5em;line-height:1.2;margin-top:8px}
 .role{margin:0;font:700 20px/1.3 var(--display);color:var(--blue)}
-.lede{margin:0;max-width:30ch;font:500 19px/1.4 var(--body);color:#cfdcf5;text-wrap:balance}
+.lede{margin:0;max-width:44ch;font:400 20px/1.5 var(--body);color:#a7b5d8}
 
-.socials{display:grid;gap:12px;margin-top:40px}
+.socials{display:grid;gap:12px;margin-top:0}
 .soc{display:flex;align-items:center;gap:16px;padding:16px 18px;border-radius:18px;box-shadow:var(--sombra);background:var(--panel);border:1px solid var(--line);text-decoration:none;transition:border-color .15s,transform .15s,background .15s}
 .soc:hover{border-color:#2f7dff;transform:translateY(-3px);background:var(--panel2)}
 .soc:focus-visible,.labs:focus-visible,.vid:focus-visible,.foot a:focus-visible{outline:2px solid var(--cyan);outline-offset:3px}
@@ -92,14 +101,23 @@ h3{margin:48px 0 14px;font:800 22px/1.2 var(--display)}
 </style>
 </head>
 <body>
+<header class="hero">
+  <div class="hero-in">
+    <div class="txt">
+      <span class="tag"><i></i>N4ZAR1 · CIBERSEGURIDAD</span>
+      <h1>Nazarí<span>Ingeniero en Detección de Amenazas</span></h1>
+      <p class="lede">Cómo te atacan y cómo evitarlo, en 60 segundos. Vídeos, laboratorios gratis y herramientas para crear.</p>
+      <nav class="accesos" aria-label="Accesos rápidos">
+        <a class="rojo" data-goatcounter-click="hero-tienda" href="https://tienda.n4zar1.com">Tienda</a>
+        <a data-goatcounter-click="hero-labs" href="https://labs.n4zar1.com" id="labsHero">Labs gratis</a>
+        <a data-goatcounter-click="hero-youtube" href="https://www.youtube.com/@n4zar1" target="_blank" rel="noopener">YouTube</a>
+      </nav>
+    </div>
+    <img class="av" src="assets/avatar.jpg" alt="Avatar de Nazarí" width="180" height="180">
+  </div>
+</header>
+
 <main class="wrap">
-  <header>
-    <span class="tag"><i></i>N4ZAR1 · CIBERSEGURIDAD</span>
-    <img class="av" src="assets/avatar.jpg" alt="Avatar de Nazarí" width="132" height="132">
-    <h1>Nazarí</h1>
-    <p class="role">Ingeniero en Detección de Amenazas</p>
-    <p class="lede">Cómo te atacan y cómo evitarlo, en 60 segundos.</p>
-  </header>
 
   <nav class="socials" aria-label="Redes sociales">
     <a class="soc" data-goatcounter-click="red-youtube" href="https://www.youtube.com/@n4zar1" target="_blank" rel="noopener">
@@ -177,7 +195,7 @@ Verano2019!</pre>
 <script>
 document.getElementById('yr').textContent = new Date().getFullYear();
 // In local preview (no domain yet) point to the local labs folder.
-if (!/n4zar1\.com$/.test(location.hostname)) document.getElementById('labsLink').href = '../labs/index.html';
+if (!/n4zar1\.com$/.test(location.hostname)) ['labsLink', 'labsHero'].forEach(id => document.getElementById(id).href = '../labs/index.html');
 // Latest videos: videos.json is refreshed every 30 min by a GitHub Action from the YouTube feed.
 fetch('videos.json?t=' + Date.now()).then(r => r.json()).then(vs => {
   const box = document.getElementById('vids');
