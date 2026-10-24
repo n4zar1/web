@@ -13,84 +13,110 @@
 <link rel="icon" type="image/png" href="../assets/favicon.png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,800&family=IBM+Plex+Sans:wght@400;500;600&family=JetBrains+Mono:wght@500;700&display=swap">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Big+Shoulders:opsz,wght@10..72,700..900&family=Geist:wght@400..700&family=Geist+Mono:wght@400;500&display=swap">
 <style>
 :root{
   color-scheme: dark;
-  --ink:#040a1c; --panel:#0b1530; --panel2:#0f1c3d; --line:#1b2b55;
-  --fg:#eaf2ff; --muted:#8fa3c8; --blue:#2f7dff; --cyan:#3fe0ff; --tg:#229ed9;
-  --display:"Bricolage Grotesque","Segoe UI",system-ui,sans-serif;
-  --body:"IBM Plex Sans","Segoe UI",system-ui,sans-serif;
-  --mono:"JetBrains Mono",Consolas,monospace;
+  --ink:#040a1c; --s1:#0a1122; --s2:#0f172b; --line:#1b2540; --line2:#2a3654;
+  --fg:#eef2fb; --fg2:#b4bfd6; --fg3:#7d89a6;
+  --azul:#1f66e5; --azul-h:#1859d1; --azul-a:#144bb3; --enlace:#5b9bff; --cian:#3fe0ff; --ok:#3ddc84;
+  --display:"Big Shoulders",Impact,"Arial Narrow",sans-serif;
+  --body:Geist,system-ui,-apple-system,"Segoe UI",sans-serif;
+  --mono:"Geist Mono",ui-monospace,Consolas,monospace;
+  --t:160ms cubic-bezier(.2,.7,.2,1);
 }
 *{box-sizing:border-box}
 html,body{margin:0}
-body{background:var(--ink);color:var(--fg);font:400 16px/1.55 var(--body);
-  background-image:radial-gradient(ellipse 80% 40% at 50% -5%,rgba(47,125,255,.32),transparent 70%)}
-a{color:var(--cyan)}
-.wrap{max-width:760px;margin:0 auto;padding:40px 16px 48px}
-.top{display:flex;align-items:center;justify-content:space-between;gap:12px;margin-bottom:34px}
-.top a.home{color:var(--muted);text-decoration:none;font:600 14px/1 var(--body)}
-.tag{display:inline-flex;align-items:center;gap:8px;font:700 11.5px/1 var(--mono);letter-spacing:.14em;border:1.5px solid var(--cyan);border-radius:5px;padding:7px 10px}
-h1{margin:0 0 14px;font:800 clamp(34px,7.5vw,54px)/1 var(--display);letter-spacing:-.03em;text-wrap:balance}
-h1 em{font-style:normal;color:var(--cyan)}
-.lede{margin:0 0 10px;font:500 18px/1.45 var(--body);color:#cfdcf5;max-width:52ch}
-.by{margin:0;font:500 13.5px/1.4 var(--mono);color:var(--muted)}
-.actions{display:flex;flex-wrap:wrap;gap:10px;margin:24px 0 8px}
-.btn{display:inline-flex;align-items:center;gap:9px;padding:13px 17px;border-radius:10px;font:700 15px/1 var(--display);text-decoration:none;border:1.5px solid var(--cyan);color:var(--fg)}
-.btn.main{background:var(--cyan);color:#031024}
-.btn.tg{background:var(--tg);border-color:var(--tg);color:#fff}
-.btn svg{width:18px;height:18px}
-.btn:focus-visible{outline:2px solid var(--cyan);outline-offset:3px}
+body{background:var(--ink);color:var(--fg);font:400 17px/1.6 var(--body);-webkit-font-smoothing:antialiased}
+::selection{background:var(--azul);color:#fff}
+a{color:var(--enlace);text-underline-offset:3px;text-decoration-thickness:1px}
+:focus-visible{outline:2px solid var(--cian);outline-offset:3px;border-radius:4px}
+.wrap{max-width:1040px;margin:0 auto;padding:0 24px 64px}
+.top{display:flex;align-items:center;justify-content:space-between;gap:12px;height:68px;border-bottom:1px solid var(--line);margin-bottom:88px}
+.top .marca{display:flex;align-items:center;gap:10px;color:var(--fg);text-decoration:none;font:600 16px/1 var(--body)}
+.top .marca img{width:30px;height:30px;border-radius:50%}
+.top .marca span{color:var(--fg3);font-weight:500}
+.top a.home{color:var(--fg2);text-decoration:none;font:500 15px/1 var(--body);padding:8px 12px;border-radius:8px;transition:color var(--t),background-color var(--t)}
+.top a.home:hover{color:var(--fg);background:var(--s1)}
+.top a.home:active{background:var(--s2)}
+h1{margin:0 0 24px;font:800 clamp(40px,5.6vw,76px)/.92 var(--display);text-transform:uppercase;letter-spacing:-.005em;max-width:16ch;text-wrap:balance}
+.lede{margin:0 0 12px;font-size:20px;line-height:1.5;color:var(--fg2);max-width:52ch}
+.by{margin:0;font:400 14px/1.4 var(--mono);color:var(--fg3)}
+.actions{display:flex;flex-wrap:wrap;align-items:center;gap:12px;margin:36px 0 0}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;min-height:48px;padding:0 20px;border-radius:8px;font:600 16px/1 var(--body);text-decoration:none;border:1px solid var(--line2);color:var(--fg);background:var(--s1);transition:background-color var(--t),border-color var(--t),transform var(--t)}
+.btn:hover{background:var(--s2);border-color:#3a4769}
+.btn:active{transform:translateY(1px) scale(.99)}
+.btn.main{background:var(--azul);border-color:var(--azul);color:#fff}
+.btn.main:hover{background:var(--azul-h);border-color:var(--azul-h)}
+.btn.main:active{background:var(--azul-a)}
+.btn svg{width:18px;height:18px;fill:none;stroke:currentColor;stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round;transition:transform var(--t)}
+.btn:hover svg.der{transform:translateX(3px)}
 
-.phase{position:relative;margin-top:22px;padding:22px 22px 18px;border-radius:16px;background:var(--panel);border:1px solid var(--line);break-inside:avoid}
-.phase .wk{font:700 12px/1 var(--mono);letter-spacing:.12em;color:var(--cyan)}
-.phase h2{margin:8px 0 12px;font:800 24px/1.15 var(--display)}
-.phase ul{margin:0;padding-left:20px}
-.phase li{margin:5px 0}
-.phase li::marker{color:var(--blue)}
-.res{margin-top:14px;padding-top:12px;border-top:1px dashed var(--line);font-size:14.5px;color:#cfdcf5}
-.res b{font:700 11.5px/1 var(--mono);letter-spacing:.12em;color:var(--muted);margin-right:6px}
-.goal{margin-top:12px;padding:10px 12px;border-radius:10px;background:rgba(63,224,255,.08);border-left:3px solid var(--cyan);font-size:14.5px}
-code{font:500 .9em var(--mono);color:var(--cyan);background:rgba(63,224,255,.08);padding:1px 5px;border-radius:4px}
-
-.ids{display:grid;grid-template-columns:repeat(auto-fill,minmax(210px,1fr));gap:6px 18px;margin:10px 0 0;padding:0;list-style:none;font-size:14.5px}
+.fases{margin-top:112px;border-top:1px solid var(--line)}
+.phase{display:grid;grid-template-columns:200px minmax(0,1fr);gap:32px;padding:44px 0;border-bottom:1px solid var(--line);break-inside:avoid}
+.phase .wk{font:400 14px/1.5 var(--mono);color:var(--fg3);padding-top:6px}
+.phase .wk b{display:block;font:800 48px/.9 var(--display);color:var(--fg);margin-bottom:8px}
+.phase h2{margin:0 0 16px;font:700 26px/1.2 var(--body);letter-spacing:-.02em}
+.phase ul{margin:0;padding-left:20px;color:var(--fg2)}
+.phase li{margin:6px 0}
+.phase li b{color:var(--fg);font-weight:600}
+.phase li::marker{color:var(--fg3)}
+.res{margin-top:20px;font-size:15px;color:var(--fg2)}
+.res b{display:block;font:500 13px/1 var(--mono);color:var(--fg3);margin-bottom:6px}
+.goal{margin-top:16px;font-size:16px;color:var(--fg)}
+.goal b{font:500 13px/1 var(--mono);color:var(--ok);margin-right:8px}
+code{font:500 .9em var(--mono);color:var(--fg);background:var(--s2);border:1px solid var(--line);padding:1px 5px;border-radius:4px}
+.ids{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:6px 24px;margin:10px 0 12px;padding:0!important;list-style:none;font-size:15px}
 .ids li{margin:0}
 
-h3{margin:40px 0 4px;font:800 24px/1.2 var(--display)}
-.check{list-style:none;padding:0;margin:12px 0 0;display:grid;gap:8px}
-.check li{padding:11px 14px 11px 42px;border-radius:10px;background:var(--panel);border:1px solid var(--line);position:relative}
-.check li::before{content:"";position:absolute;left:14px;top:13px;width:16px;height:16px;border:2px solid var(--cyan);border-radius:4px}
-.warn{margin-top:22px;font-size:14.5px;color:var(--muted)}
+h3{margin:96px 0 20px;font:800 clamp(32px,3.4vw,44px)/.95 var(--display);text-transform:uppercase;max-width:20ch}
+.check{list-style:none;padding:0;margin:0;border-top:1px solid var(--line)}
+.check li{padding:16px 0 16px 40px;border-bottom:1px solid var(--line);position:relative;color:var(--fg2)}
+.check li::before{content:"";position:absolute;left:4px;top:21px;width:16px;height:16px;border:1.5px solid var(--line2);border-radius:4px}
+.warn{margin-top:22px;font-size:14.5px;color:var(--fg3);max-width:70ch}
 
-.cta{margin-top:40px;padding:24px;border-radius:18px;background:linear-gradient(135deg,#0a1f4d,#071233);border:1.5px solid rgba(63,224,255,.55);break-inside:avoid}
-.cta h2{margin:0 0 8px;font:800 26px/1.1 var(--display)}
-.cta p{margin:0 0 6px;color:#cfdcf5}
-.foot{margin-top:40px;padding-top:18px;border-top:1px solid var(--line);color:var(--muted);font-size:13.5px}
-.foot a{color:var(--fg)}
+.cta{margin-top:112px;display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:24px;align-items:end;break-inside:avoid}
+.cta h2{margin:0 0 14px;font:800 clamp(32px,3.4vw,44px)/.95 var(--display);text-transform:uppercase}
+.cta p{margin:0 0 6px;color:var(--fg2);max-width:52ch}
+.cta .actions{margin:0;flex-direction:column;align-items:stretch}
+.foot{margin-top:112px;padding-top:24px;border-top:1px solid var(--line);color:var(--fg3);font-size:14px}
+.foot a{color:var(--fg2)}
 .print-only{display:none}
 
+@media (max-width:760px){
+  .wrap{padding:0 16px 48px}
+  .top{margin-bottom:56px}
+  .lede{font-size:18px}
+  .phase{grid-template-columns:minmax(0,1fr);gap:12px;padding:36px 0}
+  .phase .wk b{display:inline;font-size:34px;margin-right:10px}
+  .ids{grid-template-columns:minmax(0,1fr)}
+  .cta{grid-template-columns:minmax(0,1fr);gap:24px}
+  .fases{margin-top:72px}
+  .actions .btn{flex:1 1 100%}
+}
 @media print{
   @page{size:A4;margin:0}
   html,body{-webkit-print-color-adjust:exact;print-color-adjust:exact}
-  body{font-size:12.5px;background-image:none}
-  .wrap{max-width:none;padding:12mm 12mm 0}
+  body{font-size:12px}
+  .wrap{max-width:none;padding:10mm 12mm 0}
   .foot{display:none}
   .no-print{display:none!important}
   .print-only{display:block}
-  .top{margin-bottom:18px}
-  h1{font-size:36px}
-  .lede{font-size:14.5px}
-  .phase{margin-top:12px;padding:14px 16px 12px}
-  .phase h2{font-size:18px;margin:6px 0 8px}
-  .phase li{margin:3px 0}
-  .res,.goal,.ids{font-size:12px}
-  h3{margin-top:22px;font-size:19px}
-  .check li{padding:8px 12px 8px 36px}
-  .check li::before{top:9px;left:12px;width:13px;height:13px}
-  .cta{margin-top:20px;padding:16px 18px}
-  .cta h2{font-size:20px}
-  .pb{break-before:page;height:12mm}
+  .top{height:auto;padding-bottom:10px;margin-bottom:18px}
+  h1{font-size:46px;max-width:none}
+  .lede{font-size:14px}
+  .fases{margin-top:18px}
+  .phase{grid-template-columns:110px minmax(0,1fr);gap:16px;padding:12px 0}
+  .phase .wk b{font-size:28px}
+  .phase h2{font-size:17px;margin-bottom:8px}
+  .phase li{margin:2px 0}
+  .res,.goal,.ids{font-size:11.5px}
+  h3{margin-top:18px;font-size:24px}
+  .check li{padding:6px 0 6px 30px}
+  .check li::before{top:9px;width:12px;height:12px}
+  .cta{margin-top:18px;display:block}
+  .cta h2{font-size:26px}
+  .pb{break-before:page;height:10mm}
 }
 @media (prefers-reduced-motion:reduce){*{transition:none!important}}
 </style>
@@ -98,23 +124,23 @@ h3{margin:40px 0 4px;font:800 24px/1.2 var(--display)}
 <body>
 <main class="wrap">
   <div class="top">
-    <span class="tag">HOJA DE RUTA · GRATIS</span>
-    <a class="home no-print" href="../">n4zar1.com ↗</a>
+    <a class="marca" href="../"><img src="../assets/avatar.jpg" alt="" width="30" height="30">N4zar1 <span>Hoja de ruta SOC</span></a>
+    <a class="home no-print" href="../">Volver a la web</a>
   </div>
 
-  <h1>De 0 a <em>Analista SOC L1</em> en 90 días</h1>
+  <h1>De 0 a Analista SOC L1 en 90 días</h1>
   <p class="lede">Qué aprender, en qué orden y con qué recursos gratis para optar a tu primer puesto en un Centro de Operaciones de Seguridad.</p>
   <p class="by">Por Nazarí · Ingeniero en Detección de Amenazas · n4zar1.com/soc</p>
 
   <div class="actions no-print">
-    <a class="btn main" data-goatcounter-click="soc-pdf" href="hoja-de-ruta-analista-soc.pdf" download>Descargar PDF ↓</a>
-    <a class="btn tg" data-goatcounter-click="soc-telegram-top" href="https://t.me/+G8XGoQegW34wZTlk" target="_blank" rel="noopener">
-      <svg viewBox="0 0 24 24" aria-hidden="true"><path fill="#fff" d="M2.6 11.2 19.9 4.5c.8-.3 1.5.2 1.3 1.4l-2.9 13.8c-.2 1-.8 1.2-1.7.8l-4.6-3.4-2.2 2.1c-.2.2-.5.4-.9.4l.3-4.7 8.6-7.8c.4-.3-.1-.5-.6-.2L6.6 13.6l-4.6-1.4c-1-.3-1-1 .6-1Z"/></svg>
-      Canal de Telegram</a>
+    <a class="btn main" data-goatcounter-click="soc-pdf" href="hoja-de-ruta-analista-soc.pdf" download>Descargar el PDF <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 4v12M6 10l6 6 6-6M5 20h14"/></svg></a>
+    <a class="btn" data-goatcounter-click="soc-telegram-top" href="https://t.me/+G8XGoQegW34wZTlk" target="_blank" rel="noopener">Canal de Telegram</a>
   </div>
 
+  <div class="fases">
   <section class="phase">
-    <div class="wk">SEMANAS 1–3 · FUNDAMENTOS</div>
+    <div class="wk"><b>1–3</b>Semanas · Fundamentos</div>
+    <div>
     <h2>Entiende lo que vas a defender</h2>
     <ul>
       <li><b>Redes:</b> TCP/IP, puertos habituales (22, 53, 80, 443, 445, 3389), DNS, HTTP y qué es un proxy o un firewall.</li>
@@ -122,12 +148,14 @@ h3{margin:40px 0 4px;font:800 24px/1.2 var(--display)}
       <li><b>Linux:</b> moverte por la terminal, permisos, procesos y dónde están los logs (<code>/var/log</code>).</li>
       <li><b>Cómo atacan:</b> phishing, robo de credenciales, malware y movimiento lateral, a nivel de concepto.</li>
     </ul>
-    <div class="res"><b>RECURSOS</b>TryHackMe «Pre Security» · Professor Messer (Network+ y Security+, en YouTube) · OverTheWire «Bandit» para practicar Linux</div>
-    <div class="goal">✔ Meta: explicar qué pasa cuando alguien abre una web, desde el DNS hasta la respuesta.</div>
+    <div class="res"><b>Recursos</b>TryHackMe «Pre Security» · Professor Messer (Network+ y Security+, en YouTube) · OverTheWire «Bandit» para practicar Linux</div>
+    <div class="goal"><b>Meta</b>Explicar qué pasa cuando alguien abre una web, desde el DNS hasta la respuesta.</div>
+    </div>
   </section>
 
   <section class="phase">
-    <div class="wk">SEMANAS 4–6 · LOGS Y DETECCIÓN</div>
+    <div class="wk"><b>4–6</b>Semanas · Logs y detección</div>
+    <div>
     <h2>Aprende a leer lo que deja un ataque</h2>
     <ul>
       <li>Los Event ID de Windows que más vas a ver:</li>
@@ -148,13 +176,15 @@ h3{margin:40px 0 4px;font:800 24px/1.2 var(--display)}
       <li><b>MITRE ATT&amp;CK:</b> las 14 tácticas y cómo se etiqueta una alerta con una técnica (p. ej. T1059 PowerShell).</li>
       <li><b>Análisis de phishing:</b> cabeceras de un correo, SPF/DKIM/DMARC, enlaces y adjuntos.</li>
     </ul>
-    <div class="res"><b>RECURSOS</b>TryHackMe «SOC Level 1» · attack.mitre.org · configuración de Sysmon de SwiftOnSecurity · labs.n4zar1.com</div>
-    <div class="goal">✔ Meta: ver un log y decir qué ha pasado, quién lo ha hecho y si es sospechoso.</div>
+    <div class="res"><b>Recursos</b>TryHackMe «SOC Level 1» · attack.mitre.org · configuración de Sysmon de SwiftOnSecurity · labs.n4zar1.com</div>
+    <div class="goal"><b>Meta</b>Ver un log y decir qué ha pasado, quién lo ha hecho y si es sospechoso.</div>
+    </div>
   </section>
 
   <div class="pb print-only" aria-hidden="true"></div>
   <section class="phase">
-    <div class="wk">SEMANAS 7–9 · SIEM Y HOMELAB</div>
+    <div class="wk"><b>7–9</b>Semanas · SIEM y homelab</div>
+    <div>
     <h2>Monta tu propio mini SOC en casa</h2>
     <ul>
       <li>Una VM con <b>Windows + Sysmon</b> y otra con un SIEM gratuito: <b>Wazuh</b>, Elastic o Splunk Free.</li>
@@ -163,11 +193,13 @@ h3{margin:40px 0 4px;font:800 24px/1.2 var(--display)}
       <li>Escribe tus primeras <b>reglas Sigma</b> y súbelas a GitHub con una explicación de cada una.</li>
       <li>Resuelve investigaciones guiadas: Blue Team Labs Online, CyberDefenders o los Sherlocks de Hack The Box.</li>
     </ul>
-    <div class="goal">✔ Meta: un repositorio con 3–5 detecciones propias documentadas. Es tu mejor carta en una entrevista.</div>
+    <div class="goal"><b>Meta</b>Un repositorio con 3–5 detecciones propias documentadas. Es tu mejor carta en una entrevista.</div>
+    </div>
   </section>
 
   <section class="phase">
-    <div class="wk">SEMANAS 10–12 · A POR EL EMPLEO</div>
+    <div class="wk"><b>10–12</b>Semanas · A por el empleo</div>
+    <div>
     <h2>Haz que te llamen</h2>
     <ul>
       <li><b>Una certificación</b>, no cinco: CompTIA Security+ (la que más piden los filtros de RR. HH.), BTL1 o HTB CDSA (muy prácticas) o SC-200 si te interesa Microsoft Sentinel.</li>
@@ -176,8 +208,10 @@ h3{margin:40px 0 4px;font:800 24px/1.2 var(--display)}
       <li><b>Entrevistas:</b> practica explicar en voz alta cómo investigarías una alerta, paso a paso.</li>
       <li>Busca «SOC», «analista N1», «L1» y «monitorización de seguridad». Muchas empresas forman a juniors en turnos.</li>
     </ul>
-    <div class="goal">✔ Meta: 10–15 candidaturas a la semana, cada una con el CV adaptado a la oferta.</div>
+    <div class="goal"><b>Meta</b>10–15 candidaturas a la semana, cada una con el CV adaptado a la oferta.</div>
+    </div>
   </section>
+  </div>
 
   <h3>Estás listo para tu primera entrevista si…</h3>
   <ul class="check">
@@ -190,13 +224,15 @@ h3{margin:40px 0 4px;font:800 24px/1.2 var(--display)}
   <p class="warn">Esta hoja de ruta es una guía de estudio orientativa: no garantiza un empleo. El ritmo depende de tu punto de partida y de las horas que le dediques.</p>
 
   <section class="cta">
-    <h2>¿Quieres seguir aprendiendo?</h2>
-    <p>En el canal de Telegram comparto retos de «¿ataque o falso positivo?», logs reales explicados y ofertas de empleo junior. Es gratis.</p>
-    <p class="print-only"><b>Únete:</b> <a href="https://t.me/+G8XGoQegW34wZTlk">t.me/+G8XGoQegW34wZTlk</a></p>
+    <div>
+      <h2>¿Quieres seguir aprendiendo?</h2>
+      <p>En el canal de Telegram comparto retos de «¿ataque o falso positivo?», logs reales explicados y ofertas de empleo junior. Es gratis.</p>
+      <p class="no-print">Y si quieres ir más rápido, la guía de 36 páginas tiene 6 casos resueltos con sus logs, consultas SIEM listas para copiar y cómo preparar el CV y la entrevista.</p>
+      <p class="print-only"><b>Únete:</b> <a href="https://t.me/+G8XGoQegW34wZTlk">t.me/+G8XGoQegW34wZTlk</a></p>
+    </div>
     <div class="actions no-print">
-      <a class="btn tg" data-goatcounter-click="soc-telegram-cta" href="https://t.me/+G8XGoQegW34wZTlk" target="_blank" rel="noopener">
-        <svg viewBox="0 0 24 24" aria-hidden="true"><path fill="#fff" d="M2.6 11.2 19.9 4.5c.8-.3 1.5.2 1.3 1.4l-2.9 13.8c-.2 1-.8 1.2-1.7.8l-4.6-3.4-2.2 2.1c-.2.2-.5.4-.9.4l.3-4.7 8.6-7.8c.4-.3-.1-.5-.6-.2L6.6 13.6l-4.6-1.4c-1-.3-1-1 .6-1Z"/></svg>
-        Unirme al canal</a>
+      <a class="btn main" data-goatcounter-click="soc-telegram-cta" href="https://t.me/+G8XGoQegW34wZTlk" target="_blank" rel="noopener">Unirme al canal</a>
+      <a class="btn" data-goatcounter-click="soc-guia" href="https://tienda.n4zar1.com/l/guia-soc">Ver la guía <svg class="der" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
     </div>
   </section>
 
