@@ -1,0 +1,21 @@
+name: Precios de Gumroad
+on:
+  schedule:
+    - cron: '*/15 * * * *'
+  workflow_dispatch:
+permissions:
+  contents: write
+jobs:
+  actualizar:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - run: python3 scripts/precios.py
+        env:
+          GUMROAD_TOKEN: ${{ secrets.GUMROAD_TOKEN }}
+          CODIGOS_AUTO: ${{ vars.CODIGOS_AUTO }}
+      - run: |
+          git add precios.json
+          git diff --cached --quiet && exit 0
+          git -c user.name=n4zar1 -c user.email=n4zar1.cyber@gmail.com commit -m "Actualiza precios de Gumroad"
+          git push
