@@ -1,0 +1,72 @@
+/* Estilo común de n4zar1.com (portada, /soc): cian brillante, letra negra, bordes y sombras negras.
+   Mismo sistema que la tienda de Gumroad (kit-reels-venta/gumroad/cian) y que datoaldia.es en amarillo. */
+:root {
+  /* Fondo azul noche y tinta cian. Los nombres vienen del primer diseño: --cian es el FONDO, --negro la TINTA
+     (texto, bordes, sombras y botones) y --blanco el fondo de las tarjetas. */
+  --cian: #040a1c; --cian2: #0a1430; --negro: #3fe0ff; --blanco: #0d1a3a; --rojo: #ff4d5e; --verde: #3ddc84;
+  --borde: 3px solid var(--negro); --sombra: 6px 6px 0 var(--negro);
+}
+* { box-sizing: border-box; margin: 0; padding: 0; }
+[hidden] { display: none !important; }
+html { scroll-behavior: smooth; }
+body { background: var(--cian); color: var(--negro); font: 400 17px/1.55 "DM Sans", system-ui, sans-serif; -webkit-font-smoothing: antialiased; overflow-x: hidden; }
+a { color: inherit; }
+img { display: block; max-width: 100%; }
+.envoltura { max-width: 1120px; margin: 0 auto; padding: 0 20px; }
+h1, h2, h3 { font-family: "Archivo", sans-serif; font-weight: 900; font-stretch: 112%; letter-spacing: -.02em; line-height: .95; text-transform: uppercase; }
+.boton { display: inline-flex; align-items: center; justify-content: center; gap: 10px; font: 800 16px/1 "Archivo", sans-serif; font-stretch: 110%; text-transform: uppercase; text-decoration: none; padding: 17px 24px; border: var(--borde); border-radius: 999px; background: var(--negro); color: var(--cian); box-shadow: var(--sombra); transition: transform .15s, box-shadow .15s; cursor: pointer; }
+.boton:hover { transform: translate(-2px, -2px); box-shadow: 8px 8px 0 var(--negro); }
+.boton:active { transform: translate(4px, 4px); box-shadow: 2px 2px 0 var(--negro); }
+.boton.claro { background: var(--blanco); color: var(--negro); }
+a:focus-visible, .boton:focus-visible, summary:focus-visible { outline: 3px dashed var(--negro); outline-offset: 4px; }
+
+header.barra { padding: 18px 0; }
+header.barra .envoltura { display: flex; align-items: center; justify-content: space-between; gap: 16px; }
+.marca { display: flex; align-items: center; gap: 10px; text-decoration: none; font: 900 24px/1 "Archivo", sans-serif; letter-spacing: -.02em; }
+.marca img { width: 42px; height: 42px; border-radius: 50%; border: var(--borde); }
+.marca small { font: 700 13px/1 "JetBrains Mono", monospace; background: var(--negro); color: var(--cian); padding: 5px 8px; border-radius: 6px; }
+header.barra nav { display: flex; align-items: center; gap: 20px; font-weight: 700; font-size: 15px; }
+header.barra nav a { text-decoration: none; }
+header.barra nav a:not(.boton):hover { text-decoration: underline; text-decoration-thickness: 2px; text-underline-offset: 4px; }
+header.barra nav .boton { padding: 11px 16px; font-size: 13px; box-shadow: 4px 4px 0 var(--negro); }
+
+.pegatina { display: inline-block; background: var(--negro); color: var(--cian); font: 700 14px/1 "JetBrains Mono", monospace; padding: 10px 14px; border-radius: 6px; transform: rotate(-2deg); margin-bottom: 22px; }
+mark { background: var(--negro); color: var(--cian); padding: 0 .12em; display: inline-block; transform: rotate(-1.5deg); }
+
+.cinta { background: var(--negro); color: var(--cian); overflow: hidden; padding: 15px 0; }
+.cinta-pista { display: flex; width: max-content; animation: cinta 34s linear infinite; }
+.cinta span { font: 900 26px/1 "Archivo", sans-serif; font-stretch: 120%; text-transform: uppercase; white-space: nowrap; padding-right: 34px; }
+.cinta span::after { content: "//"; margin-left: 34px; color: var(--blanco); }
+@keyframes cinta { to { transform: translateX(-50%); } }
+@media (prefers-reduced-motion: reduce) { .cinta-pista { animation-duration: 70s; } }
+
+section.bloque { padding: 80px 0; }
+.antetitulo { font: 700 14px/1 "JetBrains Mono", monospace; text-transform: uppercase; letter-spacing: .08em; margin-bottom: 14px; }
+.cabeza { display: flex; flex-wrap: wrap; align-items: flex-end; justify-content: space-between; gap: 12px 24px; margin-bottom: 34px; }
+.cabeza h2 { font-size: clamp(38px, 5.4vw, 64px); }
+.cabeza > a { font-weight: 800; text-decoration: none; border-bottom: 3px solid currentColor; }
+
+.tarjeta { display: block; text-decoration: none; background: var(--blanco); border: var(--borde); border-radius: 20px; padding: 24px; box-shadow: var(--sombra); transition: transform .15s, box-shadow .15s; }
+a.tarjeta:hover { transform: translate(-2px, -2px); box-shadow: 8px 8px 0 var(--negro); }
+.tarjeta h3 { font-size: 24px; margin: 10px 0 8px; }
+.tipo { display: inline-block; font: 700 12px/1 "JetBrains Mono", monospace; text-transform: uppercase; background: var(--cian); color: var(--negro); border: 2px solid var(--negro); padding: 6px 9px; border-radius: 6px; }
+.ir { display: inline-block; margin-top: 12px; font-weight: 800; }
+.negro { background: var(--negro); color: var(--blanco); }
+.negro .antetitulo, .negro .cabeza h2, .negro .cabeza > a { color: var(--cian); }
+
+.precio { display: flex; flex-wrap: wrap; align-items: baseline; gap: 10px; }
+.precio .cifra { font: 900 46px/1 "Archivo", sans-serif; font-variant-numeric: tabular-nums; }
+.precio s { font: 800 24px/1 "Archivo", sans-serif; text-decoration-color: var(--rojo); text-decoration-thickness: 4px; }
+.precio .dto { font: 700 13px/1 "JetBrains Mono", monospace; background: var(--rojo); color: var(--blanco); padding: 5px 7px; border-radius: 6px; }
+.precio small { width: 100%; font-size: 13px; opacity: .8; }
+
+footer.pie { background: var(--negro); color: var(--cian); padding: 44px 0; }
+footer.pie .envoltura { display: flex; flex-wrap: wrap; justify-content: space-between; gap: 16px; align-items: center; font-size: 15px; }
+footer.pie a { color: var(--blanco); }
+footer.pie nav { display: flex; flex-wrap: wrap; gap: 18px; }
+
+@media (max-width: 600px) {
+  body { font-size: 16px; }
+  header.barra nav a:not(.boton) { display: none; }
+  section.bloque { padding: 56px 0; }
+}
