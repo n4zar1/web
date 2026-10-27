@@ -255,13 +255,19 @@ fetch('videos.json?t=' + Date.now()).then(r => r.json()).then(vs => {
 // descuento automático aplicado, y el normal si hay descuento. Sin impuestos, como en Gumroad.
 const euros = (n) => n.toLocaleString('es-ES', { minimumFractionDigits: n % 1 ? 2 : 0, maximumFractionDigits: 2 }) + ' €';
 fetch('https://datoaldia-api.es-estafa-bot.workers.dev/precios').then(r => r.ok ? r.json() : Promise.reject()).catch(() => fetch('precios.json?t=' + Date.now()).then(r => r.json())).then(todos => {
+  const lista = todos.productos || todos;   // el Worker envía { pais, productos }; precios.json, los productos
+  const moneda = (n, m) => n.toLocaleString('es', { style: 'currency', currency: m, maximumFractionDigits: 0 });
   document.querySelectorAll('[data-producto]').forEach(caja => {
-    const p = todos[caja.dataset.producto];
+    const p = lista[caja.dataset.producto];
     if (!p) return;
-    caja.querySelector('[data-precio]').textContent = euros(p.precio);
+    // En otro país: precio aproximado en su moneda, y el que se cobra (euros) en la línea de abajo.
+    const local = p.local;
+    caja.querySelector('[data-precio]').textContent = local ? '≈ ' + moneda(local.precio, local.moneda) : euros(p.precio);
+    const nota = caja.querySelector('small');
+    if (local && nota && !nota.dataset.hecho) { nota.textContent = 'Se cobra ' + euros(p.precio) + ' + impuestos · ' + nota.textContent.replace(/^\+ impuestos ?·? ?/, ''); nota.dataset.hecho = 1; }
     if (p.normal && p.normal > p.precio) {
       const s = caja.querySelector('[data-normal]'), d = caja.querySelector('[data-pildora]');
-      s.textContent = euros(p.normal); s.hidden = false;
+      s.textContent = local && local.normal ? moneda(local.normal, local.moneda) : euros(p.normal); s.hidden = false;
       d.textContent = '−' + Math.round((1 - p.precio / p.normal) * 100) + ' %'; d.hidden = false;
     }
     caja.hidden = false;
