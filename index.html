@@ -251,10 +251,10 @@ fetch('videos.json?t=' + Date.now()).then(r => r.json()).then(vs => {
     a.append(th, b); return a;
   }));
 }).catch(() => {});
-// Precios desde Gumroad: precios.json (una GitHub Action lo actualiza cada 15 min) trae el precio de hoy, con el
+// Precios desde Gumroad, al momento, por el Worker de Cloudflare (precios.json de respaldo): el precio de hoy, con el
 // descuento automático aplicado, y el normal si hay descuento. Sin impuestos, como en Gumroad.
 const euros = (n) => n.toLocaleString('es-ES', { minimumFractionDigits: n % 1 ? 2 : 0, maximumFractionDigits: 2 }) + ' €';
-fetch('precios.json?t=' + Date.now()).then(r => r.json()).then(todos => {
+fetch('https://datoaldia-api.es-estafa-bot.workers.dev/precios').then(r => r.ok ? r.json() : Promise.reject()).catch(() => fetch('precios.json?t=' + Date.now()).then(r => r.json())).then(todos => {
   document.querySelectorAll('[data-producto]').forEach(caja => {
     const p = todos[caja.dataset.producto];
     if (!p) return;
