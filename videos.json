@@ -1,5 +1,10 @@
 [
  {
+  "id": "9FZ5IDe19WQ",
+  "titulo": "Cómo saber qué extensión de Chrome puede leer todo lo que escribes",
+  "fecha": "2026-10-29T14:00:20+00:00"
+ },
+ {
   "id": "Ip4RzKvbiDo",
   "titulo": "Cómo saber si un proceso de Windows es un VIRUS (Process Explorer)",
   "fecha": "2026-10-28T18:30:24+00:00"
@@ -23,10 +28,5 @@
   "id": "DWld5_kmVF8",
   "titulo": "Qué es una INYECCIÓN SQL y cómo se detecta en los logs",
   "fecha": "2026-10-26T20:00:24+00:00"
- },
- {
-  "id": "1SIyrvh8oks",
-  "titulo": "Formateaste la tarjeta… y tus FOTOS SIGUEN AHÍ Así se borra",
-  "fecha": "2026-10-26T18:30:30+00:00"
  }
 ]
