@@ -7,14 +7,14 @@
  },
  "guia-soc": {
   "nombre": "Guía de iniciación para Analista SOC",
-  "precio": 15.7,
+  "precio": 20.0,
   "normal": null,
   "moneda": "eur"
  },
  "kit-reels": {
   "nombre": "Kit de Reels con IA",
-  "precio": 25.0,
-  "normal": 50.0,
+  "precio": 50.0,
+  "normal": null,
   "moneda": "eur"
  }
 }
