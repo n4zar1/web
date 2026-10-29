@@ -1,4 +1,10 @@
 {
+ "manual": {
+  "nombre": "¿Me han hackeado? · Pack de respuesta a incidentes",
+  "precio": 9.99,
+  "normal": null,
+  "moneda": "eur"
+ },
  "scamchecker": {
   "nombre": "ScamChecker · plan anual ilimitado",
   "precio": 8.26,
