@@ -1,5 +1,10 @@
 [
  {
+  "id": "BpWJbjO-bYI",
+  "titulo": "Pulsa Windows + V: tu PC guarda lo que copias (también contraseñas)",
+  "fecha": "2026-10-31T14:00:39+00:00"
+ },
+ {
   "id": "mrgXiZQJyrk",
   "titulo": "Cómo empezar a trabajar en ciberseguridad: respuesta a incidentes",
   "fecha": "2026-10-30T20:00:29+00:00"
@@ -23,10 +28,5 @@
   "id": "AqNxeMN25Nk",
   "titulo": "Cómo eliminar un virus que vuelve al reiniciar (Autoruns)",
   "fecha": "2026-10-29T18:30:08+00:00"
- },
- {
-  "id": "9FZ5IDe19WQ",
-  "titulo": "Cómo saber qué extensión de Chrome puede leer todo lo que escribes",
-  "fecha": "2026-10-29T14:00:20+00:00"
  }
 ]
