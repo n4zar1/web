@@ -10,75 +10,54 @@
 <meta property="og:description" content="Cómo te atacan y cómo evitarlo, en un minuto. Vídeos, laboratorios gratis y tienda.">
 <meta property="og:type" content="website">
 <meta property="og:image" content="https://n4zar1.com/assets/avatar.jpg">
-<meta name="theme-color" content="#040a1c">
+<meta name="theme-color" content="#ffffff" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#0a0a0a" media="(prefers-color-scheme: dark)">
 <link rel="icon" type="image/png" href="assets/favicon.png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62..125,500..900&family=DM+Sans:opsz,wght@9..40,400..700&family=JetBrains+Mono:wght@500;700&display=swap">
-<link rel="stylesheet" href="assets/cian.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Geist:wght@400..700&family=Geist+Mono:wght@400;500&display=swap">
+<link rel="stylesheet" href="assets/n4.css">
 <style>
-  .portada { padding: 36px 0 70px; }
-  .portada .envoltura { display: grid; grid-template-columns: 1.2fr .8fr; gap: 48px; align-items: center; }
-  .portada h1 { font-size: clamp(50px, 8vw, 108px); margin-bottom: 24px; }
-  .portada p { font-size: 20px; max-width: 46ch; }
-  .portada p b { background: var(--blanco); padding: 0 6px; border-radius: 4px; }
-  .portada .acciones { display: flex; flex-wrap: wrap; gap: 14px; margin-top: 30px; }
-  .avatar { position: relative; justify-self: center; }
-  .avatar img { width: min(340px, 70vw); aspect-ratio: 1; object-fit: cover; border: var(--borde); border-radius: 32px; box-shadow: 12px 12px 0 var(--negro); transform: rotate(3deg); }
-  .avatar .etiqueta { position: absolute; left: -24px; bottom: 26px; background: var(--negro); color: var(--cian); font: 700 14px/1.2 "JetBrains Mono", monospace; padding: 12px 14px; border-radius: 10px; transform: rotate(-4deg); }
-  .caminos { display: grid; grid-template-columns: 1.3fr 1fr 1fr; gap: 22px; }
-  .camino { display: flex; flex-direction: column; }
-  .camino p { margin-bottom: 18px; }
-  .camino .pasos { margin-top: auto; display: grid; gap: 10px; justify-items: start; }
-  .camino .enl { font-weight: 800; text-decoration: none; border-bottom: 3px solid var(--negro); }
-  .camino.principal { background: var(--negro); color: var(--cian); }
-  .camino.principal .tipo { background: var(--cian); color: var(--negro); border-color: var(--cian); }
-  .camino.principal .boton { background: var(--cian); color: var(--negro); border-color: var(--cian); box-shadow: 4px 4px 0 var(--blanco); }
-  .camino.principal .enl { border-color: var(--cian); }
-  .destacado { display: grid; grid-template-columns: .9fr 1.1fr; border: var(--borde); border-radius: 26px; overflow: hidden; box-shadow: 10px 10px 0 var(--negro); background: var(--blanco); }
-  .destacado .img { border-right: var(--borde); background: #000; }
-  .destacado .img img { width: 100%; height: 100%; object-fit: cover; }
-  .destacado .info { padding: 36px; display: flex; flex-direction: column; gap: 16px; }
-  .destacado h3 { font-size: 36px; }
-  .destacado ul { list-style: none; display: grid; gap: 8px; }
-  .destacado li { padding-left: 26px; position: relative; }
-  .destacado li::before { content: "✓"; position: absolute; left: 0; font-weight: 900; }
-  .destacado .acciones { display: flex; flex-wrap: wrap; gap: 12px; }
-  .kit { display: grid; grid-template-columns: 220px 1fr auto; gap: 24px; align-items: center; margin-top: 24px; }
-  .kit img { border: var(--borde); border-radius: 14px; }
-  .kit h3 { font-size: 26px; margin-bottom: 6px; }
-  .kit .flecha { font: 900 40px/1 "Archivo", sans-serif; }
-  .vids { display: grid; grid-template-columns: repeat(4, 1fr); gap: 20px; }
-  .vid { display: block; text-decoration: none; background: var(--blanco); border: var(--borde); border-radius: 18px; overflow: hidden; box-shadow: 5px 5px 0 var(--negro); transition: transform .15s, box-shadow .15s; }
-  .vid:hover { transform: translate(-2px, -2px); box-shadow: 7px 7px 0 var(--negro); }
-  .vid .th { aspect-ratio: 9 / 16; background: #000 center / cover no-repeat; border-bottom: var(--borde); }
-  .vid b { display: block; padding: 14px; font: 800 15px/1.3 "Archivo", sans-serif; color: var(--negro); }
-  .negro .vid { border-color: var(--cian); box-shadow: 5px 5px 0 var(--cian); }
-  .dos { display: grid; grid-template-columns: 1fr 1fr; gap: 28px; }
-  .filas { display: grid; gap: 14px; }
-  .fila { display: flex; align-items: center; gap: 16px; text-decoration: none; background: var(--blanco); border: var(--borde); border-radius: 16px; padding: 16px 18px; box-shadow: 4px 4px 0 var(--negro); transition: transform .15s, box-shadow .15s; }
-  a.fila:hover { transform: translate(-2px, -2px); box-shadow: 6px 6px 0 var(--negro); }
-  .fila > div { flex: 1; }
-  .fila b { font: 800 19px/1.2 "Archivo", sans-serif; }
-  .fila p { font-size: 15px; margin-top: 4px; }
-  .fila .der { font: 700 14px/1 "JetBrains Mono", monospace; white-space: nowrap; }
-  .fila svg { width: 26px; height: 26px; flex: none; fill: currentColor; }
-  .empresas { display: grid; grid-template-columns: 1.2fr .8fr; gap: 28px; align-items: center; }
-  .empresas p { font-size: 19px; }
-  .empresas .enlaces { display: grid; gap: 14px; justify-items: start; }
-  .empresas .enlaces a:not(.boton) { color: var(--cian); font-weight: 800; }
-  .empresas .boton { background: var(--cian); color: var(--negro); border-color: var(--cian); box-shadow: 5px 5px 0 var(--blanco); }
-  @media (max-width: 960px) {
-    .portada .envoltura, .destacado, .dos, .empresas { grid-template-columns: 1fr; }
-    .destacado .img { border-right: 0; border-bottom: var(--borde); max-height: 380px; }
-    .caminos { grid-template-columns: 1fr; }
-    .vids { grid-template-columns: 1fr 1fr; }
-    .kit { grid-template-columns: 1fr; }
+  .portada { padding: 64px 0 72px; }
+  .portada .envoltura { display: grid; grid-template-columns: minmax(0, 1fr) 260px; gap: 56px; align-items: center; }
+  .portada h1 { max-width: 15ch; margin-bottom: 20px; }
+  .portada .intro { font-size: 19px; color: var(--texto2); max-width: 46ch; }
+  .portada .intro b { color: var(--texto); font-weight: 600; }
+  .portada .acciones { display: flex; flex-wrap: wrap; gap: 12px; margin-top: 32px; }
+  .portada .dato { margin-top: 28px; font-size: 14.5px; color: var(--texto3); }
+  .foto { justify-self: end; }
+  .foto img { width: 260px; height: auto; aspect-ratio: 1; object-fit: cover; border-radius: 24px; }
+  .fila .der .precio { justify-content: flex-end; }
+  .fila .der .precio small { text-align: right; }
+  .fila .gratis { color: var(--ok); font-family: var(--sans); font-weight: 600; }
+  .vids { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 24px; }
+  .vid { text-decoration: none; color: var(--texto); }
+  .vid .th { aspect-ratio: 9 / 16; border-radius: 12px; background: var(--superficie2) center / cover no-repeat; transition: opacity var(--t); }
+  .vid:hover .th { opacity: .88; }
+  .vid b { display: block; margin-top: 12px; font: 500 15px/1.4 var(--sans); }
+  .vid:hover b { text-decoration: underline; text-underline-offset: 3px; }
+  .redes { display: flex; flex-wrap: wrap; gap: 8px; }
+  .red { display: inline-flex; align-items: center; gap: 8px; min-height: 44px; padding: 0 14px; border: 1px solid var(--linea2); border-radius: 10px; color: var(--texto); text-decoration: none; font-weight: 500; font-size: 15px; transition: background-color var(--t); }
+  .red:hover { background: var(--superficie); }
+  .red svg { width: 18px; height: 18px; fill: currentColor; }
+  .red span { color: var(--texto3); font-size: 14px; }
+  .empresas { display: grid; grid-template-columns: minmax(0, 1fr) auto; gap: 24px 48px; align-items: center; padding: 28px; border: 1px solid var(--linea); border-radius: 16px; background: var(--superficie); }
+  .empresas h2 { font-size: 22px; margin-bottom: 6px; }
+  .empresas p { color: var(--texto2); max-width: 60ch; }
+  .empresas .enlaces { display: flex; flex-wrap: wrap; align-items: center; gap: 12px 20px; }
+  @media (max-width: 860px) {
+    .portada { padding: 40px 0 56px; }
+    .portada .envoltura { grid-template-columns: 1fr; gap: 28px; }
+    .foto { grid-row: 1; justify-self: start; }
+    .foto img { width: 88px; height: auto; border-radius: 50%; }
+    .fila .der .precio { justify-content: flex-start; }
+    .fila .der .precio small { text-align: left; }
+    .vids { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 20px 16px; }
+    .empresas { grid-template-columns: 1fr; }
   }
-  @media (max-width: 600px) {
+  @media (max-width: 640px) {
+    .portada .intro { font-size: 17.5px; }
     .portada .acciones .boton { flex: 1 1 100%; }
-    .destacado .info { padding: 24px; }
-    .avatar .etiqueta { left: 0; }
   }
 </style>
 </head>
@@ -86,12 +65,11 @@
 
 <header class="barra">
   <div class="envoltura">
-    <a class="marca" href="./"><img src="assets/avatar.jpg" alt="" width="42" height="42">N4zar1</a>
+    <a class="marca" href="./"><img src="assets/avatar.jpg" alt="" width="32" height="32">N4zar1</a>
     <nav aria-label="Principal">
       <a id="labsNav" data-goatcounter-click="nav-labs" href="https://labs.n4zar1.com">Labs</a>
+      <a class="opc" href="#videos">Vídeos</a>
       <a data-goatcounter-click="nav-tienda" href="https://tienda.n4zar1.com">Tienda</a>
-      <a href="#videos">Vídeos</a>
-      <a class="boton" data-goatcounter-click="nav-empiezo" href="#caminos">¿Por dónde empiezo?</a>
     </nav>
   </div>
 </header>
@@ -100,124 +78,85 @@
   <section class="portada">
     <div class="envoltura">
       <div>
-        <span class="pegatina">&gt; threat_detection --en_1_minuto</span>
-        <h1>Cómo te atacan <mark>y cómo evitarlo.</mark></h1>
-        <p>Soy <b>Nazarí</b>, ingeniero en detección de amenazas. Me paso el día cazando ataques en empresas y bancos, y aquí te los cuento en un minuto. Luego puedes investigarlos tú en los labs.</p>
+        <h1>Cómo te atacan y cómo evitarlo, en un minuto.</h1>
+        <p class="intro">Soy <b>Nazarí</b>, ingeniero en detección de amenazas: me paso el día cazando ataques en empresas y bancos. Te los cuento en vídeos cortos y luego puedes investigarlos tú, gratis, en los labs.</p>
         <div class="acciones">
-          <a class="boton" href="#caminos">Elige por dónde empezar ↓</a>
-          <a class="boton claro" data-goatcounter-click="hero-telegram" href="https://t.me/+G8XGoQegW34wZTlk" target="_blank" rel="noopener">Canal de Telegram</a>
+          <a class="boton" id="labsHero" data-goatcounter-click="hero-labs" href="https://labs.n4zar1.com">Resolver un lab gratis</a>
+          <a class="boton claro" href="#videos">Ver los últimos vídeos</a>
         </div>
+        <p class="dato">Más de 2 millones de visualizaciones al mes en YouTube, Instagram y TikTok.</p>
       </div>
-      <div class="avatar"><img src="assets/avatar.jpg" alt="Nazarí (N4zar1)" width="340" height="340"><span class="etiqueta">Detection Engineer</span></div>
+      <div class="foto"><img src="assets/avatar.jpg" alt="Nazarí (N4zar1)" width="260" height="260"></div>
     </div>
   </section>
 
-  <div class="cinta" aria-hidden="true"><div class="cinta-pista">
-    <span>Estafas</span><span>Hackeos reales</span><span>Logs de Windows</span><span>Analista SOC</span><span>Labs gratis</span>
-    <span>Estafas</span><span>Hackeos reales</span><span>Logs de Windows</span><span>Analista SOC</span><span>Labs gratis</span>
-  </div></div>
-
-  <section class="bloque" id="caminos" aria-labelledby="t-caminos">
+  <section class="bloque" id="todo" aria-labelledby="t-todo">
     <div class="envoltura">
-      <div class="cabeza"><div><p class="antetitulo">// empieza aquí</p><h2 id="t-caminos">¿Qué quieres hacer?</h2></div></div>
-      <div class="caminos">
-        <div class="tarjeta camino principal">
-          <span class="tipo">Carrera</span>
-          <h3>Trabajar en ciberseguridad</h3>
-          <p>Lo que necesitas para tu primer puesto en un SOC: el método de triage, los logs que vas a ver, casos resueltos y cómo preparar el CV y la entrevista. Es lo que hice yo, sin estudios.</p>
-          <div class="pasos">
-            <a class="boton" data-goatcounter-click="camino-trabajo-guia" href="#destacado">Ver la guía para Analista SOC</a>
-            <a class="enl" data-goatcounter-click="camino-trabajo-hoja" href="soc/">O empieza por la hoja de ruta gratis →</a>
-          </div>
-        </div>
-        <div class="tarjeta camino">
-          <span class="tipo">Seguridad</span>
-          <h3>Protegerme</h3>
-          <p>Casos reales contados en un minuto, y labs gratis para investigarlos tú desde el navegador.</p>
-          <div class="pasos">
-            <a class="enl" id="labsCamino" data-goatcounter-click="camino-labs" href="https://labs.n4zar1.com">Resolver un lab <span id="numLabs"></span> →</a>
-            <a class="enl" href="#videos">Últimos vídeos →</a>
-          </div>
-        </div>
-        <div class="tarjeta camino">
-          <span class="tipo">Contenido</span>
-          <h3>Hacer vídeos como estos</h3>
-          <p>El kit con el que hago los míos: tú pones la idea y tu IA hace el reel.</p>
-          <div class="pasos"><a class="enl" data-goatcounter-click="camino-kit" href="https://tienda.n4zar1.com/l/kit-reels">Ver el kit →</a></div>
-        </div>
+      <div class="cabeza"><h2 id="t-todo">Qué hay aquí</h2></div>
+      <div class="filas">
+        <a class="fila" id="labsLink" data-goatcounter-click="ir-a-labs" href="https://labs.n4zar1.com">
+          <div><b>Laboratorios</b><p>Un reto por cada vídeo técnico: lees los registros de un caso inventado y descubres qué pasó. En el navegador, sin cuenta.</p></div>
+          <span class="der"><span class="gratis">Gratis</span><br><span id="numLabs"></span></span>
+          <svg class="flecha" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+        </a>
+        <a class="fila" data-goatcounter-click="ir-a-soc" href="soc/">
+          <div><b>Hoja de ruta para Analista SOC</b><p>De cero a tu primer puesto en un SOC en 90 días: qué estudiar y en qué orden. También en PDF.</p></div>
+          <span class="der"><span class="gratis">Gratis</span></span>
+          <svg class="flecha" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+        </a>
+        <a class="fila" data-goatcounter-click="ir-a-guia" href="https://tienda.n4zar1.com/l/guia-soc">
+          <div><b>Guía de iniciación para Analista SOC</b><p>El método, los logs y las consultas de un turno real, con 6 casos resueltos, homelab, tu primera regla Sigma y la entrevista. PDF de 36 páginas.</p></div>
+          <span class="der"><span class="precio" data-producto="guia-soc" hidden><span class="cifra" data-precio></span><s data-normal hidden></s><span class="dto" data-pildora hidden></span><small>+ impuestos</small></span></span>
+          <svg class="flecha" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+        </a>
+        <a class="fila" data-goatcounter-click="ir-a-tienda" href="https://tienda.n4zar1.com/l/kit-reels">
+          <div><b>Kit de Reels con IA</b><p>El kit con el que hago mis vídeos: guion, voz, animación, subtítulos y portada. Tú pones la idea y tu IA hace el reel.</p></div>
+          <span class="der"><span class="precio" data-producto="kit-reels" hidden><span class="cifra" data-precio></span><s data-normal hidden></s><span class="dto" data-pildora hidden></span><small>+ impuestos</small></span></span>
+          <svg class="flecha" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+        </a>
+        <a class="fila" data-goatcounter-click="red-telegram" href="https://t.me/+G8XGoQegW34wZTlk" target="_blank" rel="noopener">
+          <div><b>Canal de Telegram</b><p>Aviso de cada vídeo y lab nuevo, y lo que no cabe en un minuto.</p></div>
+          <span class="der"><span class="gratis">Gratis</span></span>
+          <svg class="flecha" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+        </a>
       </div>
     </div>
   </section>
 
-  <section class="bloque" id="destacado" aria-labelledby="t-destacado" style="padding-top:0">
+  <section class="bloque" id="videos" aria-labelledby="t-videos">
     <div class="envoltura">
-      <div class="cabeza"><div><p class="antetitulo">// destacado</p><h2 id="t-destacado">La guía SOC.</h2></div><a href="https://tienda.n4zar1.com" data-goatcounter-click="ver-tienda">Ver la tienda →</a></div>
-      <article class="destacado">
-        <a class="img" href="https://tienda.n4zar1.com/l/guia-soc" tabindex="-1" data-goatcounter-click="destacado-imagen"><img src="https://public-files.gumroad.com/f5x978rpgbp6193sf40t9es7k66h" alt="Portada de la Guía de iniciación para Analista SOC" width="600" height="600" loading="lazy"></a>
-        <div class="info">
-          <span class="tipo" style="align-self:flex-start">Guía PDF</span>
-          <h3>Guía de iniciación para Analista SOC</h3>
-          <p>El método, los logs, las consultas y los casos resueltos que usa un analista en su turno.</p>
-          <ul><li>6 casos resueltos con sus logs</li><li>Consultas en KQL, SPL y ES|QL</li><li>Homelab, tu primera regla Sigma, portafolio y entrevista</li></ul>
-          <div class="precio" data-producto="guia-soc" hidden><span class="cifra" data-precio></span><s data-normal hidden></s><span class="dto" data-pildora hidden></span><small>+ impuestos · PDF de 36 páginas · descarga inmediata</small></div>
-          <div class="acciones">
-            <a class="boton" data-goatcounter-click="destacado-comprar" href="https://n4zar1.gumroad.com/l/guia-soc?wanted=true" data-gumroad-overlay-checkout="true">Comprar</a>
-            <a class="boton claro" data-goatcounter-click="destacado-ver" href="https://tienda.n4zar1.com/l/guia-soc">Qué incluye</a>
-          </div>
-        </div>
-      </article>
-      <a class="tarjeta kit" href="https://tienda.n4zar1.com/l/kit-reels" data-goatcounter-click="ir-a-tienda">
-        <img src="https://public-files.gumroad.com/zn9dpjuc7xu7vs3l7pgffby03h0m" alt="" width="1280" height="720" loading="lazy">
-        <div><h3>Kit de Reels con IA</h3><p>Guion, voz, animación 3D, subtítulos y portada. Analiza tu nicho y sirve para cualquier tema.</p>
-          <div class="precio" data-producto="kit-reels" hidden style="margin-top:10px"><span class="cifra" data-precio style="font-size:30px"></span><s data-normal hidden></s><span class="dto" data-pildora hidden></span><small>+ impuestos</small></div></div>
-        <span class="flecha">→</span>
-      </a>
-    </div>
-  </section>
-
-  <section class="bloque negro" id="videos" aria-labelledby="t-videos">
-    <div class="envoltura">
-      <div class="cabeza"><div><p class="antetitulo">// en un minuto</p><h2 id="t-videos">Últimos vídeos</h2></div><a href="https://www.youtube.com/@n4zar1/shorts" target="_blank" rel="noopener">Todos en YouTube →</a></div>
+      <div class="cabeza"><h2 id="t-videos">Últimos vídeos</h2><a href="https://www.youtube.com/@n4zar1/shorts" target="_blank" rel="noopener">Todos en YouTube →</a></div>
       <div class="vids" id="vids">
-        <a class="vid" href="https://www.youtube.com/shorts/SetfaLckmMs" target="_blank" rel="noopener"><div class="th" style="background-image:url(https://i.ytimg.com/vi/SetfaLckmMs/oar2.jpg),url(https://i.ytimg.com/vi/SetfaLckmMs/hqdefault.jpg)"></div><b>Este «No soy un robot» te HACKEA Descúbrelo en 1 minuto</b></a>
-        <a class="vid" href="https://www.youtube.com/shorts/5ofZLCuWKWc" target="_blank" rel="noopener"><div class="th" style="background-image:url(https://i.ytimg.com/vi/5ofZLCuWKWc/oar2.jpg),url(https://i.ytimg.com/vi/5ofZLCuWKWc/hqdefault.jpg)"></div><b>Este programa de Windows DESCARGA malware ¿Lo tienes?</b></a>
+        <a class="vid" href="https://www.youtube.com/shorts/ZyejY74RaUc" target="_blank" rel="noopener"><div class="th" style="background-image:url(https://i.ytimg.com/vi/ZyejY74RaUc/oar2.jpg),url(https://i.ytimg.com/vi/ZyejY74RaUc/hqdefault.jpg)"></div><b>Qué es el clickjacking y cómo se detecta (el botón invisible)</b></a>
+        <a class="vid" href="https://www.youtube.com/shorts/5Lf3hUwjXnI" target="_blank" rel="noopener"><div class="th" style="background-image:url(https://i.ytimg.com/vi/5Lf3hUwjXnI/oar2.jpg),url(https://i.ytimg.com/vi/5Lf3hUwjXnI/hqdefault.jpg)"></div><b>Cómo ver lo que tu antivirus no analiza: exclusiones de Windows Defender</b></a>
       </div>
     </div>
   </section>
 
-  <section class="bloque">
-    <div class="envoltura dos">
-      <div>
-        <div class="cabeza"><div><p class="antetitulo">// sin pagar</p><h2 id="t-gratis">Gratis</h2></div></div>
-        <div class="filas">
-          <a class="fila" id="labsLink" data-goatcounter-click="ir-a-labs" href="https://labs.n4zar1.com"><div><b>Laboratorios</b><p>Investiga intrusiones, caza dominios falsos y lee registros de Windows, desde el navegador.</p></div><span class="der">→</span></a>
-          <a class="fila" data-goatcounter-click="ir-a-soc" href="soc/"><div><b>Hoja de ruta SOC</b><p>De 0 a Analista SOC L1 en 90 días: qué estudiar y en qué orden. También en PDF.</p></div><span class="der">→</span></a>
-          <a class="fila" data-goatcounter-click="red-telegram" href="https://t.me/+G8XGoQegW34wZTlk" target="_blank" rel="noopener"><div><b>Canal de Telegram</b><p>Avisos de vídeos y labs nuevos, y lo que no cabe en un minuto.</p></div><span class="der">→</span></a>
-        </div>
-      </div>
-      <nav aria-labelledby="t-redes">
-        <div class="cabeza"><div><p class="antetitulo">// sígueme</p><h2 id="t-redes">Redes</h2></div></div>
-        <div class="filas">
-          <a class="fila" data-goatcounter-click="red-youtube" href="https://www.youtube.com/@n4zar1" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M23 7.2a3 3 0 0 0-2.1-2.1C19 4.6 12 4.6 12 4.6s-7 0-8.9.5A3 3 0 0 0 1 7.2 31 31 0 0 0 .5 12a31 31 0 0 0 .5 4.8 3 3 0 0 0 2.1 2.1c1.9.5 8.9.5 8.9.5s7 0 8.9-.5a3 3 0 0 0 2.1-2.1 31 31 0 0 0 .5-4.8 31 31 0 0 0-.5-4.8zM9.7 15.1V8.9L15.4 12l-5.7 3.1z"/></svg><div><b>YouTube</b></div><span class="der">@n4zar1</span></a>
-          <a class="fila" data-goatcounter-click="red-instagram" href="https://www.instagram.com/n4zar1.cyber/" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2.2c3.2 0 3.6 0 4.8.1 3.2.1 4.8 1.7 4.9 4.9.1 1.3.1 1.6.1 4.8s0 3.6-.1 4.8c-.1 3.2-1.7 4.8-4.9 4.9-1.3.1-1.6.1-4.8.1s-3.6 0-4.8-.1c-3.3-.1-4.8-1.7-4.9-4.9C2.2 15.6 2.2 15.2 2.2 12s0-3.6.1-4.8C2.4 3.9 4 2.4 7.2 2.3 8.4 2.2 8.8 2.2 12 2.2zm0 4.6a5.2 5.2 0 1 0 0 10.4 5.2 5.2 0 0 0 0-10.4zm0 8.6a3.4 3.4 0 1 1 0-6.8 3.4 3.4 0 0 1 0 6.8zm5.4-9.9a1.2 1.2 0 1 0 0 2.4 1.2 1.2 0 0 0 0-2.4z"/></svg><div><b>Instagram</b></div><span class="der">@n4zar1.cyber</span></a>
-          <a class="fila" data-goatcounter-click="red-tiktok" href="https://www.tiktok.com/@n4zar1.cyber" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M19.6 6.7a4.8 4.8 0 0 1-3.8-4.2V2h-3.4v13.7a2.9 2.9 0 1 1-2-2.8V9.4a6.3 6.3 0 1 0 5.4 6.3V8.8a8.2 8.2 0 0 0 3.8 1.2V6.7z"/></svg><div><b>TikTok</b></div><span class="der">@n4zar1.cyber</span></a>
-          <a class="fila" data-goatcounter-click="red-linkedin" href="https://linkedin.com/in/n4zar1" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20.4 20.5h-3.6v-5.6c0-1.3 0-3-1.8-3s-2.1 1.4-2.1 2.9v5.7H9.4V9h3.4v1.6h.1a3.7 3.7 0 0 1 3.4-1.9c3.6 0 4.3 2.4 4.3 5.5v6.3zM5.3 7.4a2.1 2.1 0 1 1 0-4.2 2.1 2.1 0 0 1 0 4.2zM7.1 20.5H3.6V9h3.5v11.5z"/></svg><div><b>LinkedIn</b></div><span class="der">Carlos Fernández</span></a>
-        </div>
+  <section class="bloque" aria-labelledby="t-redes">
+    <div class="envoltura">
+      <div class="cabeza"><h2 id="t-redes">Sígueme</h2></div>
+      <nav class="redes" aria-label="Redes sociales">
+        <a class="red" data-goatcounter-click="red-youtube" href="https://www.youtube.com/@n4zar1" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M23 7.2a3 3 0 0 0-2.1-2.1C19 4.6 12 4.6 12 4.6s-7 0-8.9.5A3 3 0 0 0 1 7.2 31 31 0 0 0 .5 12a31 31 0 0 0 .5 4.8 3 3 0 0 0 2.1 2.1c1.9.5 8.9.5 8.9.5s7 0 8.9-.5a3 3 0 0 0 2.1-2.1 31 31 0 0 0 .5-4.8 31 31 0 0 0-.5-4.8zM9.7 15.1V8.9L15.4 12l-5.7 3.1z"/></svg>YouTube <span>@n4zar1</span></a>
+        <a class="red" data-goatcounter-click="red-instagram" href="https://www.instagram.com/n4zar1.cyber/" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2.2c3.2 0 3.6 0 4.8.1 3.2.1 4.8 1.7 4.9 4.9.1 1.3.1 1.6.1 4.8s0 3.6-.1 4.8c-.1 3.2-1.7 4.8-4.9 4.9-1.3.1-1.6.1-4.8.1s-3.6 0-4.8-.1c-3.3-.1-4.8-1.7-4.9-4.9C2.2 15.6 2.2 15.2 2.2 12s0-3.6.1-4.8C2.4 3.9 4 2.4 7.2 2.3 8.4 2.2 8.8 2.2 12 2.2zm0 4.6a5.2 5.2 0 1 0 0 10.4 5.2 5.2 0 0 0 0-10.4zm0 8.6a3.4 3.4 0 1 1 0-6.8 3.4 3.4 0 0 1 0 6.8zm5.4-9.9a1.2 1.2 0 1 0 0 2.4 1.2 1.2 0 0 0 0-2.4z"/></svg>Instagram <span>@n4zar1.cyber</span></a>
+        <a class="red" data-goatcounter-click="red-tiktok" href="https://www.tiktok.com/@n4zar1.cyber" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M19.6 6.7a4.8 4.8 0 0 1-3.8-4.2V2h-3.4v13.7a2.9 2.9 0 1 1-2-2.8V9.4a6.3 6.3 0 1 0 5.4 6.3V8.8a8.2 8.2 0 0 0 3.8 1.2V6.7z"/></svg>TikTok <span>@n4zar1.cyber</span></a>
+        <a class="red" data-goatcounter-click="red-linkedin" href="https://linkedin.com/in/n4zar1" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20.4 20.5h-3.6v-5.6c0-1.3 0-3-1.8-3s-2.1 1.4-2.1 2.9v5.7H9.4V9h3.4v1.6h.1a3.7 3.7 0 0 1 3.4-1.9c3.6 0 4.3 2.4 4.3 5.5v6.3zM5.3 7.4a2.1 2.1 0 1 1 0-4.2 2.1 2.1 0 0 1 0 4.2zM7.1 20.5H3.6V9h3.5v11.5z"/></svg>LinkedIn <span>Carlos Fernández</span></a>
       </nav>
     </div>
   </section>
 
-  <section class="bloque negro" aria-labelledby="t-empresas">
-    <div class="envoltura empresas">
-      <div>
-        <p class="antetitulo">// empresas</p>
-        <h2 id="t-empresas" style="font-size:clamp(34px,4.6vw,56px);margin-bottom:16px">Auditoría, consultoría y detección de amenazas</h2>
-        <p>Trabajo como autónomo y en remoto: reglas de detección para tu SIEM y tu EDR, y revisión de lo que ya tienes montado.</p>
-      </div>
-      <div class="enlaces">
-        <a class="boton" href="mailto:n4zar1.cyber@gmail.com">Escríbeme</a>
-        <a href="cv/">CV en español →</a>
-        <a href="cv/es.html">CV in English →</a>
+  <section class="bloque" aria-labelledby="t-empresas" style="padding-top:0;border-top:0">
+    <div class="envoltura">
+      <div class="empresas">
+        <div>
+          <h2 id="t-empresas">¿Tienes una empresa?</h2>
+          <p>Auditoría, consultoría y detección de amenazas, en remoto: reglas para tu SIEM y tu EDR, y revisión de lo que ya tienes montado.</p>
+        </div>
+        <div class="enlaces">
+          <a class="boton claro" href="mailto:n4zar1.cyber@gmail.com">Escríbeme</a>
+          <a href="cv/">CV en español</a>
+          <a href="cv/es.html">CV in English</a>
+        </div>
       </div>
     </div>
   </section>
@@ -226,7 +165,7 @@
 <footer class="pie">
   <div class="envoltura">
     <span>© <span id="yr">2026</span> Nazarí · N4zar1</span>
-    <nav><a href="https://tienda.n4zar1.com">Tienda</a><a href="https://labs.n4zar1.com">Labs</a><a href="soc/">Hoja de ruta SOC</a></nav>
+    <nav aria-label="Pie"><a href="https://labs.n4zar1.com" id="labsPie">Labs</a><a href="https://tienda.n4zar1.com">Tienda</a><a href="soc/">Hoja de ruta SOC</a></nav>
     <span>Estadísticas anónimas, sin cookies</span>
   </div>
 </footer>
@@ -236,7 +175,7 @@ document.getElementById('yr').textContent = new Date().getFullYear();
 // En la vista previa local (sin dominio) los enlaces a los labs apuntan a la carpeta local.
 const local = !/n4zar1\.com$/.test(location.hostname);
 const LABS_URL = local ? '../labs/' : 'https://labs.n4zar1.com/';
-if (local) ['labsLink', 'labsNav', 'labsCamino'].forEach(id => document.getElementById(id).href = LABS_URL + 'index.html');
+if (local) ['labsLink', 'labsNav', 'labsHero', 'labsPie'].forEach(id => document.getElementById(id).href = LABS_URL + 'index.html');
 // Últimos vídeos: una GitHub Action actualiza videos.json cada 30 min desde el feed de YouTube.
 fetch('videos.json?t=' + Date.now()).then(r => r.json()).then(vs => {
   const box = document.getElementById('vids');
@@ -261,13 +200,13 @@ fetch('https://datoaldia-api.es-estafa-bot.workers.dev/precios').then(r => r.ok 
     const p = lista[caja.dataset.producto];
     if (!p) return;
     // En otro país: precio aproximado en su moneda, y el que se cobra (euros) en la línea de abajo.
-    const local = p.local;
-    caja.querySelector('[data-precio]').textContent = local ? '≈ ' + moneda(local.precio, local.moneda) : euros(p.precio);
+    const loc = p.local;
+    caja.querySelector('[data-precio]').textContent = loc ? '≈ ' + moneda(loc.precio, loc.moneda) : euros(p.precio);
     const nota = caja.querySelector('small');
-    if (local && nota && !nota.dataset.hecho) { nota.textContent = 'Se cobra ' + euros(p.precio) + ' + impuestos · ' + nota.textContent.replace(/^\+ impuestos ?·? ?/, ''); nota.dataset.hecho = 1; }
+    if (loc && nota) nota.textContent = 'Se cobra ' + euros(p.precio) + ' + impuestos';
     if (p.normal && p.normal > p.precio) {
       const s = caja.querySelector('[data-normal]'), d = caja.querySelector('[data-pildora]');
-      s.textContent = local && local.normal ? moneda(local.normal, local.moneda) : euros(p.normal); s.hidden = false;
+      s.textContent = loc && loc.normal ? moneda(loc.normal, loc.moneda) : euros(p.normal); s.hidden = false;
       d.textContent = '−' + Math.round((1 - p.precio / p.normal) * 100) + ' %'; d.hidden = false;
     }
     caja.hidden = false;
@@ -279,11 +218,10 @@ s.src = LABS_URL + 'assets/lab.js';
 s.onload = () => {
   if (typeof LABS === 'undefined') return;
   const n = LABS.filter(l => !l.pub || Date.now() >= Date.parse(l.pub)).length;
-  document.getElementById('numLabs').textContent = '· ' + n;
+  document.getElementById('numLabs').textContent = n + ' retos';
 };
 document.head.append(s);
 </script>
-<script src="https://gumroad.com/js/gumroad.js"></script>
 <script data-goatcounter="https://n4zar1.goatcounter.com/count" async src="https://gc.zgo.at/count.js"></script>
 </body>
 </html>

@@ -9,11 +9,11 @@
 <meta property="og:description" content="Hoja de ruta gratuita: qué aprender, en qué orden y con qué recursos gratis.">
 <meta property="og:type" content="article">
 <meta property="og:image" content="https://n4zar1.com/assets/avatar.jpg">
-<meta name="theme-color" content="#040a1c">
+<meta name="theme-color" content="#ffffff" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#0a0a0a" media="(prefers-color-scheme: dark)">
 <link rel="icon" type="image/png" href="../assets/favicon.png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62..125,500..900&family=DM+Sans:opsz,wght@9..40,400..700&family=JetBrains+Mono:wght@500;700&display=swap">
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Big+Shoulders:opsz,wght@10..72,700..900&family=Geist:wght@400..700&family=Geist+Mono:wght@400;500&display=swap">
 <style>
 :root{
@@ -120,45 +120,57 @@ h3{margin:96px 0 20px;font:800 clamp(32px,3.4vw,44px)/.95 var(--display);text-tr
   .pb{break-before:page;height:10mm}
 }
 @media (prefers-reduced-motion:reduce){*{transition:none!important}}
-/* Estilo nuevo en pantalla (27/10/2026): azul noche, tinta cian, bordes gruesos y sombras desplazadas, como el
-   resto de n4zar1.com. La impresión (el PDF) sigue con el estilo de arriba. */
+/* Pantalla (4/11/2026): el sistema común de n4zar1.com, fondo blanco o negro según el modo del navegador y cian de
+   acento. La impresión (el PDF) sigue con el estilo de arriba. */
 @media screen{
-  :root{--cn:#3fe0ff;--nv:#040a1c;--pn:#0d1a3a;--rj:#ff4d5e}
-  body{background:var(--nv);color:var(--cn);font-family:"DM Sans",system-ui,sans-serif}
-  a{color:var(--cn)}
-  .wrap{max-width:1040px;padding:0 20px 80px}
-  .top{border-bottom:0;height:auto;padding:18px 0;margin-bottom:56px}
-  .top .marca{color:var(--cn);font:900 22px/1 "Archivo",sans-serif}
-  .top .marca img{width:42px;height:42px;border:3px solid var(--cn)}
-  .top .marca span{font:700 13px/1 "JetBrains Mono",monospace;background:var(--cn);color:var(--nv);padding:5px 8px;border-radius:6px}
-  .top a.home{color:var(--cn);font-weight:700;border:3px solid var(--cn);border-radius:999px;padding:10px 16px}
-  .top a.home:hover{background:var(--cn);color:var(--nv)}
-  h1{font:900 clamp(46px,7.4vw,96px)/.95 "Archivo",sans-serif;font-stretch:112%;letter-spacing:-.02em;text-transform:uppercase;color:var(--cn)}
-  .lede{color:var(--cn);font-size:20px}
-  .by{color:var(--cn);opacity:.75;font-family:"JetBrains Mono",monospace;font-size:14px}
-  .btn{font:800 15px/1 "Archivo",sans-serif;text-transform:uppercase;border:3px solid var(--cn);border-radius:999px;padding:16px 22px;color:var(--cn);background:var(--pn);box-shadow:5px 5px 0 var(--cn);text-decoration:none;transition:transform .15s,box-shadow .15s}
-  .btn.main{background:var(--cn);color:var(--nv)}
-  .btn:hover{transform:translate(-2px,-2px);box-shadow:7px 7px 0 var(--cn)}
-  .fases{display:grid;gap:26px}
-  .phase{background:var(--pn);border:3px solid var(--cn);border-radius:22px;padding:26px;box-shadow:6px 6px 0 var(--cn)}
-  .phase .wk{color:var(--cn);font-family:"JetBrains Mono",monospace;text-transform:uppercase}
-  .phase .wk b{font:900 54px/1 "Archivo",sans-serif;color:var(--cn)}
-  .phase h2,h3,.cta h2{font-family:"Archivo",sans-serif;font-weight:900;text-transform:uppercase;letter-spacing:-.01em;color:var(--cn)}
-  .phase li,.check li,.warn{color:var(--cn)}
-  .phase b{color:var(--cn)}
-  code,.ids code{font-family:"JetBrains Mono",monospace;background:var(--cn);color:var(--nv);border-radius:5px;padding:1px 6px}
-  .res,.goal{border:2px solid var(--cn);border-radius:14px;background:var(--nv);color:var(--cn);padding:12px 14px}
-  .res b,.goal b{color:var(--nv);background:var(--cn);border-radius:5px;padding:2px 7px}
-  .check li::before{border-color:var(--cn);background:var(--cn)}
-  .warn{opacity:.8}
-  .cta{background:var(--cn);color:var(--nv);border:3px solid var(--cn);border-radius:26px;box-shadow:8px 8px 0 var(--pn),8px 8px 0 3px var(--cn)}
-  .cta h2,.cta p{color:var(--nv)}
-  .cta .btn{background:var(--nv);color:var(--cn);border-color:var(--nv);box-shadow:4px 4px 0 var(--pn)}
-  .cta .btn.main{background:var(--nv);color:var(--cn)}
-  .foot{color:var(--cn);opacity:.8;border-top:0}
-  ::selection{background:var(--cn);color:var(--nv)}
+  :root{color-scheme:light dark;
+    --fondo:#ffffff;--superficie:#f5f7f8;--superficie2:#eceff1;--linea:#e2e6e9;--linea2:#c8d0d5;
+    --texto:#0b0f12;--texto2:#4b5560;--texto3:#6b7680;--acento:#0a7590;--cian:#3fe0ff;--cian-h:#22cdee;--sobre-cian:#04161c;--ok2:#0b7a40}
+  @media (prefers-color-scheme:dark){:root{
+    --fondo:#0a0a0a;--superficie:#141516;--superficie2:#1c1e20;--linea:#26292c;--linea2:#3a3e42;
+    --texto:#f1f3f4;--texto2:#a9b1b8;--texto3:#7d868d;--acento:#3fe0ff;--ok2:#3ddc84}}
+  body{background:var(--fondo);color:var(--texto);font-family:Geist,system-ui,sans-serif}
+  ::selection{background:var(--cian);color:var(--sobre-cian)}
+  a{color:var(--acento)}
+  :focus-visible{outline-color:var(--acento)}
+  .top{border-bottom:1px solid var(--linea);margin-bottom:64px;height:64px}
+  .top .marca{color:var(--texto);font:700 17px/1 Geist,sans-serif}
+  .top .marca img{width:32px;height:32px}
+  .top .marca span{font:500 12px/1 "Geist Mono",monospace;color:var(--texto3);border:1px solid var(--linea2);padding:4px 7px;border-radius:6px}
+  .top a.home{color:var(--texto2)}
+  .top a.home:hover{color:var(--texto);background:var(--superficie)}
+  h1{font:700 clamp(34px,4.8vw,52px)/1.08 Geist,sans-serif;letter-spacing:-.03em;text-transform:none;max-width:20ch}
+  .lede{color:var(--texto2);font-size:19px}
+  .by{color:var(--texto3);font-family:Geist,sans-serif}
+  .btn{border-radius:10px;font-family:Geist,sans-serif;color:var(--texto);background:transparent;border-color:var(--linea2)}
+  .btn:hover{background:var(--superficie);border-color:var(--linea2)}
+  .btn.main{background:var(--cian);border-color:var(--cian);color:var(--sobre-cian)}
+  .btn.main:hover{background:var(--cian-h);border-color:var(--cian-h)}
+  .fases{margin-top:80px;border-top:1px solid var(--linea)}
+  .phase{border-bottom:1px solid var(--linea)}
+  .phase .wk{color:var(--texto3);font-family:Geist,sans-serif}
+  .phase .wk b{font:700 40px/1 Geist,sans-serif;letter-spacing:-.03em;color:var(--acento)}
+  .phase h2{font:700 24px/1.25 Geist,sans-serif;letter-spacing:-.02em;color:var(--texto)}
+  .phase ul{color:var(--texto2)}
+  .phase li b{color:var(--texto)}
+  .phase li::marker{color:var(--acento)}
+  .res{color:var(--texto2)}
+  .res b{font-family:Geist,sans-serif;font-weight:600;color:var(--texto3)}
+  .goal{color:var(--texto);background:var(--superficie);border-radius:10px;padding:12px 14px}
+  .goal b{font-family:Geist,sans-serif;font-weight:600;color:var(--ok2)}
+  code{color:var(--texto);background:var(--superficie2);border-color:var(--linea);font-family:"Geist Mono",monospace}
+  h3{font:700 clamp(24px,2.8vw,30px)/1.15 Geist,sans-serif;letter-spacing:-.025em;text-transform:none;color:var(--texto);margin-top:80px}
+  .check{border-top-color:var(--linea)}
+  .check li{color:var(--texto2);border-bottom-color:var(--linea)}
+  .check li::before{border-color:var(--linea2)}
+  .warn{color:var(--texto3)}
+  .cta{background:var(--superficie);border:1px solid var(--linea);border-radius:16px;padding:32px;margin-top:88px}
+  .cta h2{font:700 clamp(24px,2.8vw,30px)/1.15 Geist,sans-serif;letter-spacing:-.025em;text-transform:none;color:var(--texto)}
+  .cta p{color:var(--texto2)}
+  .foot{color:var(--texto3);border-top-color:var(--linea)}
+  .foot a{color:var(--texto2)}
 }
-
+@media screen and (max-width:760px){.cta{padding:22px}}
 </style>
 </head>
 <body>
