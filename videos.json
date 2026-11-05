@@ -1,5 +1,20 @@
 [
  {
+  "id": "h_HYti9Aq2g",
+  "titulo": "Kali Linux en Windows en 1 minuto, sin VirtualBox",
+  "fecha": "2026-11-05T20:00:17+00:00"
+ },
+ {
+  "id": "-PogXrpL23Y",
+  "titulo": "Qué es un ataque CSRF y cómo se detecta (sin pulsar nada)",
+  "fecha": "2026-11-05T18:30:31+00:00"
+ },
+ {
+  "id": "3ptcN7oEHNM",
+  "titulo": "Cómo instalar KALI LINUX en Windows con escritorio gráfico (WSL + Win-KeX) paso a paso",
+  "fecha": "2026-11-05T17:18:50+00:00"
+ },
+ {
   "id": "320W0d2knWY",
   "titulo": "Cómo saber si alguien ha intentado entrar en tu PC",
   "fecha": "2026-11-05T14:00:03+00:00"
@@ -13,20 +28,5 @@
   "id": "5Lf3hUwjXnI",
   "titulo": "Cómo ver lo que tu antivirus no analiza: exclusiones de Windows Defender",
   "fecha": "2026-11-04T14:00:28+00:00"
- },
- {
-  "id": "24pLVvB7YuI",
-  "titulo": "Qué es un IDOR y cómo se detecta (ves la factura de otro)",
-  "fecha": "2026-11-03T18:30:13+00:00"
- },
- {
-  "id": "5-TxQNRQjqk",
-  "titulo": "Cómo saber si el archivo hosts te lleva a una web falsa de tu banco",
-  "fecha": "2026-11-03T14:00:38+00:00"
- },
- {
-  "id": "r6M0X0CrvZM",
-  "titulo": "La 1.ª pregunta de una entrevista de ciberseguridad: TCP vs UDP",
-  "fecha": "2026-11-02T20:00:37+00:00"
  }
 ]
