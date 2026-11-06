@@ -1,5 +1,10 @@
 [
  {
+  "id": "-_n8m5lDYOE",
+  "titulo": "Cómo saber qué app usó tu cámara o micrófono en Windows 11",
+  "fecha": "2026-11-06T14:00:24+00:00"
+ },
+ {
   "id": "h_HYti9Aq2g",
   "titulo": "Kali Linux en Windows en 1 minuto, sin VirtualBox",
   "fecha": "2026-11-05T20:00:17+00:00"
@@ -23,10 +28,5 @@
   "id": "ZyejY74RaUc",
   "titulo": "Qué es el clickjacking y cómo se detecta (el botón invisible)",
   "fecha": "2026-11-04T18:30:05+00:00"
- },
- {
-  "id": "5Lf3hUwjXnI",
-  "titulo": "Cómo ver lo que tu antivirus no analiza: exclusiones de Windows Defender",
-  "fecha": "2026-11-04T14:00:28+00:00"
  }
 ]
