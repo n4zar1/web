@@ -1,5 +1,10 @@
 [
  {
+  "id": "iS2XaQb758s",
+  "titulo": "Qué es un path traversal y cómo se detecta (tres caracteres)",
+  "fecha": "2026-11-06T18:30:04+00:00"
+ },
+ {
   "id": "-_n8m5lDYOE",
   "titulo": "Cómo saber qué app usó tu cámara o micrófono en Windows 11",
   "fecha": "2026-11-06T14:00:24+00:00"
@@ -23,10 +28,5 @@
   "id": "320W0d2knWY",
   "titulo": "Cómo saber si alguien ha intentado entrar en tu PC",
   "fecha": "2026-11-05T14:00:03+00:00"
- },
- {
-  "id": "ZyejY74RaUc",
-  "titulo": "Qué es el clickjacking y cómo se detecta (el botón invisible)",
-  "fecha": "2026-11-04T18:30:05+00:00"
  }
 ]
