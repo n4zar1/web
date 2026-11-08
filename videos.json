@@ -1,5 +1,15 @@
 [
  {
+  "id": "ewZX0BMmJSQ",
+  "titulo": "Qué fue Log4Shell y cómo se detecta (una frase en un chat)",
+  "fecha": "2026-11-08T18:30:22+00:00"
+ },
+ {
+  "id": "qcSnB-FEBNo",
+  "titulo": "GPT-6 Cyber: la IA hacker de OpenAI encontró 81 fallos en Firefox",
+  "fecha": "2026-11-08T16:00:09+00:00"
+ },
+ {
   "id": "d63z9ng_b2Q",
   "titulo": "Cómo ver qué programas tienen permiso en el firewall de Windows",
   "fecha": "2026-11-08T14:00:04+00:00"
@@ -18,15 +28,5 @@
   "id": "iS2XaQb758s",
   "titulo": "Qué es un path traversal y cómo se detecta (tres caracteres)",
   "fecha": "2026-11-06T18:30:04+00:00"
- },
- {
-  "id": "-_n8m5lDYOE",
-  "titulo": "Cómo saber qué app usó tu cámara o micrófono en Windows 11",
-  "fecha": "2026-11-06T14:00:24+00:00"
- },
- {
-  "id": "h_HYti9Aq2g",
-  "titulo": "Kali Linux en Windows en 1 minuto, sin VirtualBox",
-  "fecha": "2026-11-05T20:00:17+00:00"
  }
 ]
