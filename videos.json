@@ -1,5 +1,10 @@
 [
  {
+  "id": "d63z9ng_b2Q",
+  "titulo": "Cómo ver qué programas tienen permiso en el firewall de Windows",
+  "fecha": "2026-11-08T14:00:04+00:00"
+ },
+ {
   "id": "x79aLXNVgfU",
   "titulo": "Qué es una redirección abierta y cómo se detecta (el enlace de tu banco)",
   "fecha": "2026-11-07T18:30:04+00:00"
@@ -23,10 +28,5 @@
   "id": "h_HYti9Aq2g",
   "titulo": "Kali Linux en Windows en 1 minuto, sin VirtualBox",
   "fecha": "2026-11-05T20:00:17+00:00"
- },
- {
-  "id": "-PogXrpL23Y",
-  "titulo": "Qué es un ataque CSRF y cómo se detecta (sin pulsar nada)",
-  "fecha": "2026-11-05T18:30:31+00:00"
  }
 ]
