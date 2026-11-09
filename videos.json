@@ -1,5 +1,15 @@
 [
  {
+  "id": "MC54gUoYIFc",
+  "titulo": "Qué es SSRF y cómo se detecta (pide una foto, te da las claves)",
+  "fecha": "2026-11-09T18:30:04+00:00"
+ },
+ {
+  "id": "4IwPfwkFw7g",
+  "titulo": "Cómo ver las tareas programadas de Windows y detectar una sospechosa",
+  "fecha": "2026-11-09T14:00:00+00:00"
+ },
+ {
   "id": "ewZX0BMmJSQ",
   "titulo": "Qué fue Log4Shell y cómo se detecta (una frase en un chat)",
   "fecha": "2026-11-08T18:30:22+00:00"
@@ -18,15 +28,5 @@
   "id": "x79aLXNVgfU",
   "titulo": "Qué es una redirección abierta y cómo se detecta (el enlace de tu banco)",
   "fecha": "2026-11-07T18:30:04+00:00"
- },
- {
-  "id": "pjEQ4Lh_HsE",
-  "titulo": "Cómo saber si tu internet pasa por un proxy que no has puesto",
-  "fecha": "2026-11-07T14:00:32+00:00"
- },
- {
-  "id": "iS2XaQb758s",
-  "titulo": "Qué es un path traversal y cómo se detecta (tres caracteres)",
-  "fecha": "2026-11-06T18:30:04+00:00"
  }
 ]
