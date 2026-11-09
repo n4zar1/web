@@ -5,6 +5,12 @@
   "normal": null,
   "moneda": "eur"
  },
+ "chuleta": {
+  "nombre": "Chuleta: revisa tu PC en 15 minutos",
+  "precio": 4.99,
+  "normal": null,
+  "moneda": "eur"
+ },
  "scamchecker": {
   "nombre": "ScamChecker · plan anual ilimitado",
   "precio": 8.26,
