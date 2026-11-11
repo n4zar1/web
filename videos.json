@@ -1,5 +1,10 @@
 [
  {
+  "id": "odx5CR7pH6s",
+  "titulo": "Cómo ver qué USB se han conectado a tu PC",
+  "fecha": "2026-11-11T14:00:19+00:00"
+ },
+ {
   "id": "QRkE_XpWVYE",
   "titulo": "Qué es la inyección de comandos y cómo se detecta (un punto y coma) ⌨",
   "fecha": "2026-11-10T18:30:08+00:00"
@@ -23,10 +28,5 @@
   "id": "ewZX0BMmJSQ",
   "titulo": "Qué fue Log4Shell y cómo se detecta (una frase en un chat)",
   "fecha": "2026-11-08T18:30:22+00:00"
- },
- {
-  "id": "qcSnB-FEBNo",
-  "titulo": "GPT-6 Cyber: la IA hacker de OpenAI encontró 81 fallos en Firefox",
-  "fecha": "2026-11-08T16:00:09+00:00"
  }
 ]
