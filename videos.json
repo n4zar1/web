@@ -1,5 +1,25 @@
 [
  {
+  "id": "xkhh1CUHRg4",
+  "titulo": "Analiza tus primeros logs con SigmaLens | Curso Analista SOC · Lección 0.3",
+  "fecha": "2026-11-12T23:36:38+00:00"
+ },
+ {
+  "id": "5ml9cwQPJZU",
+  "titulo": "MITRE ATT&CK explicado: el mapa de cómo se ataca | Curso Analista SOC · Lección 0.2",
+  "fecha": "2026-11-12T23:35:24+00:00"
+ },
+ {
+  "id": "z2Qy4eUbK18",
+  "titulo": "Qué es un SOC y qué hace un analista | Curso Analista SOC · Lección 0.1",
+  "fecha": "2026-11-12T23:34:09+00:00"
+ },
+ {
+  "id": "XDrJ5Jqohq0",
+  "titulo": "Robo de la cookie de sesión: así entran sin contraseña ni 2FA",
+  "fecha": "2026-11-12T18:30:13+00:00"
+ },
+ {
   "id": "M5v-X6IFsds",
   "titulo": "Cómo saber si tu correo reenvía copia a otra persona (Gmail y Outlook)",
   "fecha": "2026-11-12T14:00:08+00:00"
@@ -8,25 +28,5 @@
   "id": "8dJVWQ5njFY",
   "titulo": "Qué es una web shell y cómo se detecta (la foto de perfil trampa)",
   "fecha": "2026-11-11T18:30:05+00:00"
- },
- {
-  "id": "odx5CR7pH6s",
-  "titulo": "Cómo ver qué USB se han conectado a tu PC",
-  "fecha": "2026-11-11T14:00:19+00:00"
- },
- {
-  "id": "QRkE_XpWVYE",
-  "titulo": "Qué es la inyección de comandos y cómo se detecta (un punto y coma) ⌨",
-  "fecha": "2026-11-10T18:30:08+00:00"
- },
- {
-  "id": "i9xAxh3zNXE",
-  "titulo": "Cómo ver qué apps tienen acceso a tu cuenta de Google",
-  "fecha": "2026-11-10T14:00:25+00:00"
- },
- {
-  "id": "MC54gUoYIFc",
-  "titulo": "Qué es SSRF y cómo se detecta (pide una foto, te da las claves)",
-  "fecha": "2026-11-09T18:30:04+00:00"
  }
 ]
