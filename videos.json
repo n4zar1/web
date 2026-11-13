@@ -1,5 +1,15 @@
 [
  {
+  "id": "TaEN7nlG2n8",
+  "titulo": "Qué es un JWT manipulado y cómo se detecta (el pase de admin)",
+  "fecha": "2026-11-13T18:30:05+00:00"
+ },
+ {
+  "id": "cUa8Pg_4M1U",
+  "titulo": "Cómo ver qué DNS usa tu PC y si un virus lo ha cambiado",
+  "fecha": "2026-11-13T14:00:11+00:00"
+ },
+ {
   "id": "xkhh1CUHRg4",
   "titulo": "Analiza tus primeros logs con SigmaLens | Curso Analista SOC · Lección 0.3",
   "fecha": "2026-11-12T23:36:38+00:00"
@@ -18,15 +28,5 @@
   "id": "XDrJ5Jqohq0",
   "titulo": "Robo de la cookie de sesión: así entran sin contraseña ni 2FA",
   "fecha": "2026-11-12T18:30:13+00:00"
- },
- {
-  "id": "M5v-X6IFsds",
-  "titulo": "Cómo saber si tu correo reenvía copia a otra persona (Gmail y Outlook)",
-  "fecha": "2026-11-12T14:00:08+00:00"
- },
- {
-  "id": "8dJVWQ5njFY",
-  "titulo": "Qué es una web shell y cómo se detecta (la foto de perfil trampa)",
-  "fecha": "2026-11-11T18:30:05+00:00"
  }
 ]
