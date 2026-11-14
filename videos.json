@@ -1,5 +1,10 @@
 [
  {
+  "id": "g4BHVCGox2E",
+  "titulo": "Clave de AWS subida a GitHub: cómo se detecta y se arregla",
+  "fecha": "2026-11-14T18:30:00+00:00"
+ },
+ {
   "id": "Xaqu33xg7XA",
   "titulo": "Cómo ver los certificados raíz de tu PC (y detectar uno falso)",
   "fecha": "2026-11-14T14:00:14+00:00"
@@ -23,10 +28,5 @@
   "id": "5ml9cwQPJZU",
   "titulo": "MITRE ATT&CK explicado: el mapa de cómo se ataca | Curso Analista SOC · Lección 0.2",
   "fecha": "2026-11-12T23:35:24+00:00"
- },
- {
-  "id": "z2Qy4eUbK18",
-  "titulo": "Qué es un SOC y qué hace un analista | Curso Analista SOC · Lección 0.1",
-  "fecha": "2026-11-12T23:34:09+00:00"
  }
 ]
