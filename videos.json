@@ -1,5 +1,10 @@
 [
  {
+  "id": "8HgjqhkxkEo",
+  "titulo": "Qué es XXE y cómo se detecta (el archivo de texto que lee el servidor)",
+  "fecha": "2026-11-15T18:30:36+00:00"
+ },
+ {
   "id": "XuSI_jYHgYg",
   "titulo": "Cómo ver qué apps tienen permiso de accesibilidad en Android",
   "fecha": "2026-11-15T14:00:17+00:00"
@@ -23,10 +28,5 @@
   "id": "cUa8Pg_4M1U",
   "titulo": "Cómo ver qué DNS usa tu PC y si un virus lo ha cambiado",
   "fecha": "2026-11-13T14:00:11+00:00"
- },
- {
-  "id": "xkhh1CUHRg4",
-  "titulo": "Analiza tus primeros logs con SigmaLens | Curso Analista SOC · Lección 0.3",
-  "fecha": "2026-11-12T23:36:38+00:00"
  }
 ]
