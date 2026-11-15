@@ -1,5 +1,10 @@
 [
  {
+  "id": "XuSI_jYHgYg",
+  "titulo": "Cómo ver qué apps tienen permiso de accesibilidad en Android",
+  "fecha": "2026-11-15T14:00:17+00:00"
+ },
+ {
   "id": "g4BHVCGox2E",
   "titulo": "Clave de AWS subida a GitHub: cómo se detecta y se arregla",
   "fecha": "2026-11-14T18:30:00+00:00"
@@ -23,10 +28,5 @@
   "id": "xkhh1CUHRg4",
   "titulo": "Analiza tus primeros logs con SigmaLens | Curso Analista SOC · Lección 0.3",
   "fecha": "2026-11-12T23:36:38+00:00"
- },
- {
-  "id": "5ml9cwQPJZU",
-  "titulo": "MITRE ATT&CK explicado: el mapa de cómo se ataca | Curso Analista SOC · Lección 0.2",
-  "fecha": "2026-11-12T23:35:24+00:00"
  }
 ]
