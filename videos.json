@@ -1,5 +1,15 @@
 [
  {
+  "id": "ieK8ZMEgXes",
+  "titulo": "Inyección SQL: entrar como admin sin contraseña (y cómo lo caza un analista)",
+  "fecha": "2026-11-16T18:30:13+00:00"
+ },
+ {
+  "id": "75ciK37d_pQ",
+  "titulo": "Cómo saber qué es un aparato desconocido en tu wifi",
+  "fecha": "2026-11-16T14:00:18+00:00"
+ },
+ {
   "id": "8HgjqhkxkEo",
   "titulo": "Qué es XXE y cómo se detecta (el archivo de texto que lee el servidor)",
   "fecha": "2026-11-15T18:30:36+00:00"
@@ -18,15 +28,5 @@
   "id": "Xaqu33xg7XA",
   "titulo": "Cómo ver los certificados raíz de tu PC (y detectar uno falso)",
   "fecha": "2026-11-14T14:00:14+00:00"
- },
- {
-  "id": "TaEN7nlG2n8",
-  "titulo": "Qué es un JWT manipulado y cómo se detecta (el pase de admin)",
-  "fecha": "2026-11-13T18:30:05+00:00"
- },
- {
-  "id": "cUa8Pg_4M1U",
-  "titulo": "Cómo ver qué DNS usa tu PC y si un virus lo ha cambiado",
-  "fecha": "2026-11-13T14:00:11+00:00"
  }
 ]
