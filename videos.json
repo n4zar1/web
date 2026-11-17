@@ -1,5 +1,15 @@
 [
  {
+  "id": "9zIlWiRB1js",
+  "titulo": "Cómo detectar un Word con virus que tu antivirus no ve",
+  "fecha": "2026-11-17T18:30:27+00:00"
+ },
+ {
+  "id": "uDEoeICKTf8",
+  "titulo": "Cómo ver qué ejecuta de verdad un proceso de Windows",
+  "fecha": "2026-11-17T14:00:37+00:00"
+ },
+ {
   "id": "ieK8ZMEgXes",
   "titulo": "Inyección SQL: entrar como admin sin contraseña (y cómo lo caza un analista)",
   "fecha": "2026-11-16T18:30:13+00:00"
@@ -18,15 +28,5 @@
   "id": "XuSI_jYHgYg",
   "titulo": "Cómo ver qué apps tienen permiso de accesibilidad en Android",
   "fecha": "2026-11-15T14:00:17+00:00"
- },
- {
-  "id": "g4BHVCGox2E",
-  "titulo": "Clave de AWS subida a GitHub: cómo se detecta y se arregla",
-  "fecha": "2026-11-14T18:30:00+00:00"
- },
- {
-  "id": "Xaqu33xg7XA",
-  "titulo": "Cómo ver los certificados raíz de tu PC (y detectar uno falso)",
-  "fecha": "2026-11-14T14:00:14+00:00"
  }
 ]
