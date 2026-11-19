@@ -1,5 +1,10 @@
 [
  {
+  "id": "gjK4sfWJEkA",
+  "titulo": "Cómo detectar un ransomware antes de que cifre: las 3 señales",
+  "fecha": "2026-11-19T18:30:12+00:00"
+ },
+ {
   "id": "UVXAjHuX6R0",
   "titulo": "Cómo saber si alguien ha encendido tu PC",
   "fecha": "2026-11-19T14:00:18+00:00"
@@ -23,10 +28,5 @@
   "id": "uDEoeICKTf8",
   "titulo": "Cómo ver qué ejecuta de verdad un proceso de Windows",
   "fecha": "2026-11-17T14:00:37+00:00"
- },
- {
-  "id": "ieK8ZMEgXes",
-  "titulo": "Inyección SQL: entrar como admin sin contraseña (y cómo lo caza un analista)",
-  "fecha": "2026-11-16T18:30:13+00:00"
  }
 ]
