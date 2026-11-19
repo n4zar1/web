@@ -1,5 +1,10 @@
 [
  {
+  "id": "UVXAjHuX6R0",
+  "titulo": "Cómo saber si alguien ha encendido tu PC",
+  "fecha": "2026-11-19T14:00:18+00:00"
+ },
+ {
   "id": "yh_qVsetTlQ",
   "titulo": "Cómo detectar fuerza bruta por Escritorio remoto (RDP) en los eventos de Windows",
   "fecha": "2026-11-18T18:30:34+00:00"
@@ -23,10 +28,5 @@
   "id": "ieK8ZMEgXes",
   "titulo": "Inyección SQL: entrar como admin sin contraseña (y cómo lo caza un analista)",
   "fecha": "2026-11-16T18:30:13+00:00"
- },
- {
-  "id": "75ciK37d_pQ",
-  "titulo": "Cómo saber qué es un aparato desconocido en tu wifi",
-  "fecha": "2026-11-16T14:00:18+00:00"
  }
 ]
